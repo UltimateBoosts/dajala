@@ -1,4 +1,4 @@
-const base_url = 'http://localhost/superfudsapp/public/api'
+const base_url = 'https://superfudsapp.herokuapp.com/api'
 const API = {
     PRODUCTS: `${base_url}/inventory/products`
 }
