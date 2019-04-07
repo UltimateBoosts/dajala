@@ -173,6 +173,57 @@ module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/
 
 /***/ }),
 
+/***/ "./node_modules/add-px-to-style/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/add-px-to-style/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* The following list is defined in React's core */
+var IS_UNITLESS = {
+  animationIterationCount: true,
+  boxFlex: true,
+  boxFlexGroup: true,
+  boxOrdinalGroup: true,
+  columnCount: true,
+  flex: true,
+  flexGrow: true,
+  flexPositive: true,
+  flexShrink: true,
+  flexNegative: true,
+  flexOrder: true,
+  gridRow: true,
+  gridColumn: true,
+  fontWeight: true,
+  lineClamp: true,
+  lineHeight: true,
+  opacity: true,
+  order: true,
+  orphans: true,
+  tabSize: true,
+  widows: true,
+  zIndex: true,
+  zoom: true,
+
+  // SVG-related properties
+  fillOpacity: true,
+  stopOpacity: true,
+  strokeDashoffset: true,
+  strokeOpacity: true,
+  strokeWidth: true
+};
+
+module.exports = function(name, value) {
+  if(typeof value === 'number' && !IS_UNITLESS[ name ]) {
+    return value + 'px';
+  } else {
+    return value;
+  }
+};
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -6517,6 +6568,241 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = _react2.default.createContext || _implementation2.default;
 module.exports = exports['default'];
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/Buy.scss":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./resources/js/app/buy/Buy.scss ***!
+  \****************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".custom-col-products {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  background: white;\n  padding: 1em 0.5em;\n  border: 1px solid #e9ecef;\n  margin: 0.1em;\n}\n\n.custom-col-container {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  align-items: center;\n}\n\n.custom-col-cart {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  background: white;\n  padding: 1em 0.5em;\n  border: 1px solid #e9ecef;\n  margin: 0.1em;\n}\n\n.Buy-checkout {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n  padding: 1em;\n  margin: 0.5em;\n  border-top: 1px solid #e9ecef;\n}\n.Buy-checkout p {\n  margin: 0;\n  font-size: 1.5em;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/components/productCart/Product.scss":
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./resources/js/app/buy/components/productCart/Product.scss ***!
+  \*******************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".Product {\n  max-width: 200px;\n  width: 100%;\n  padding: 0.5em;\n  margin: 0.5em;\n  border: 1px solid #e9ecef;\n  min-height: 200px;\n  position: relative;\n}\n.Product img {\n  width: 100%;\n  border-bottom: 1px solid #e9ecef;\n  margin-bottom: 0.5em;\n}\n.Product-name {\n  text-transform: capitalize;\n  color: #31c592;\n  font-weight: bold;\n  text-align: center;\n  font-size: 1.1em;\n}\n.Product-price {\n  margin: 0;\n  font-size: 1.1em;\n}\n.Product .badge {\n  font-size: 0.8em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin: 0.5em;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/components/productList/ProductList.scss":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./resources/js/app/buy/components/productList/ProductList.scss ***!
+  \***********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ProductList {\n  width: 100%;\n  padding: 0.5em;\n  margin: 0.5em;\n  border: 1px solid #e9ecef;\n  min-height: 100px;\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  text-align: center;\n}\n.ProductList img {\n  max-height: 70px;\n  height: 100%;\n}\n.ProductList-name {\n  text-transform: capitalize;\n  color: #31c592;\n  font-weight: bold;\n  text-align: center;\n  font-size: 1.1em;\n}\n.ProductList-price {\n  width: 100%;\n  margin: 0;\n  font-size: 1.1em;\n}\n.ProductList-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 60%;\n  border-left: 1px solid #ccc;\n  padding-left: 1em;\n}\n.ProductList .badge {\n  font-size: 0.8em;\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin: 0.5em;\n}\n.ProductList-controls {\n  display: flex;\n  align-items: center;\n  justify-content: space-around;\n  text-align: center;\n  width: 100%;\n}\n.ProductList-controls button {\n  padding: 0.5em 1em;\n  border-radius: 100%;\n  font-size: 0.8em;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/checkout/Checkout.scss":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/lib/loader.js??ref--7-3!./resources/js/app/checkout/Checkout.scss ***!
+  \**************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".invoice {\n  padding: 1em;\n}\n.invoice-detail {\n  font-size: 2em;\n  color: #31c593;\n  font-weight: bold;\n  text-align: center;\n}\n\n.table {\n  text-align: right;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/dom-css/index.js":
+/*!***************************************!*\
+  !*** ./node_modules/dom-css/index.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var prefix = __webpack_require__(/*! prefix-style */ "./node_modules/prefix-style/index.js")
+var toCamelCase = __webpack_require__(/*! to-camel-case */ "./node_modules/to-camel-case/index.js")
+var cache = { 'float': 'cssFloat' }
+var addPxToStyle = __webpack_require__(/*! add-px-to-style */ "./node_modules/add-px-to-style/index.js")
+
+function style (element, property, value) {
+  var camel = cache[property]
+  if (typeof camel === 'undefined') {
+    camel = detect(property)
+  }
+
+  // may be false if CSS prop is unsupported
+  if (camel) {
+    if (value === undefined) {
+      return element.style[camel]
+    }
+
+    element.style[camel] = addPxToStyle(camel, value)
+  }
+}
+
+function each (element, properties) {
+  for (var k in properties) {
+    if (properties.hasOwnProperty(k)) {
+      style(element, k, properties[k])
+    }
+  }
+}
+
+function detect (cssProp) {
+  var camel = toCamelCase(cssProp)
+  var result = prefix(camel)
+  cache[camel] = cache[cssProp] = cache[result] = result
+  return result
+}
+
+function set () {
+  if (arguments.length === 2) {
+    if (typeof arguments[1] === 'string') {
+      arguments[0].style.cssText = arguments[1]
+    } else {
+      each(arguments[0], arguments[1])
+    }
+  } else {
+    style(arguments[0], arguments[1], arguments[2])
+  }
+}
+
+module.exports = set
+module.exports.set = set
+
+module.exports.get = function (element, properties) {
+  if (Array.isArray(properties)) {
+    return properties.reduce(function (obj, prop) {
+      obj[prop] = style(element, prop || '')
+      return obj
+    }, {})
+  } else {
+    return style(element, properties || '')
+  }
+}
+
 
 /***/ }),
 
@@ -35326,6 +35612,54 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 /***/ }),
 
+/***/ "./node_modules/performance-now/lib/performance-now.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/performance-now/lib/performance-now.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Generated by CoffeeScript 1.12.2
+(function() {
+  var getNanoSeconds, hrtime, loadTime, moduleLoadTime, nodeLoadTime, upTime;
+
+  if ((typeof performance !== "undefined" && performance !== null) && performance.now) {
+    module.exports = function() {
+      return performance.now();
+    };
+  } else if ((typeof process !== "undefined" && process !== null) && process.hrtime) {
+    module.exports = function() {
+      return (getNanoSeconds() - nodeLoadTime) / 1e6;
+    };
+    hrtime = process.hrtime;
+    getNanoSeconds = function() {
+      var hr;
+      hr = hrtime();
+      return hr[0] * 1e9 + hr[1];
+    };
+    moduleLoadTime = getNanoSeconds();
+    upTime = process.uptime() * 1e9;
+    nodeLoadTime = moduleLoadTime - upTime;
+  } else if (Date.now) {
+    module.exports = function() {
+      return Date.now() - loadTime;
+    };
+    loadTime = Date.now();
+  } else {
+    module.exports = function() {
+      return new Date().getTime() - loadTime;
+    };
+    loadTime = new Date().getTime();
+  }
+
+}).call(this);
+
+//# sourceMappingURL=performance-now.js.map
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -37944,6 +38278,47 @@ Popper.Defaults = Defaults;
 
 /***/ }),
 
+/***/ "./node_modules/prefix-style/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/prefix-style/index.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var div = null
+var prefixes = [ 'Webkit', 'Moz', 'O', 'ms' ]
+
+module.exports = function prefixStyle (prop) {
+  // re-use a dummy div
+  if (!div) {
+    div = document.createElement('div')
+  }
+
+  var style = div.style
+
+  // prop exists without prefix
+  if (prop in style) {
+    return prop
+  }
+
+  // borderRadius -> BorderRadius
+  var titleCase = prop.charAt(0).toUpperCase() + prop.slice(1)
+
+  // find the vendor-prefixed prop
+  for (var i = prefixes.length; i >= 0; i--) {
+    var name = prefixes[i] + titleCase
+    // e.g. WebkitBorderRadius or webkitBorderRadius
+    if (name in style) {
+      return name
+    }
+  }
+
+  return false
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -38903,6 +39278,1232 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
 
+
+/***/ }),
+
+/***/ "./node_modules/raf/index.js":
+/*!***********************************!*\
+  !*** ./node_modules/raf/index.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var now = __webpack_require__(/*! performance-now */ "./node_modules/performance-now/lib/performance-now.js")
+  , root = typeof window === 'undefined' ? global : window
+  , vendors = ['moz', 'webkit']
+  , suffix = 'AnimationFrame'
+  , raf = root['request' + suffix]
+  , caf = root['cancel' + suffix] || root['cancelRequest' + suffix]
+
+for(var i = 0; !raf && i < vendors.length; i++) {
+  raf = root[vendors[i] + 'Request' + suffix]
+  caf = root[vendors[i] + 'Cancel' + suffix]
+      || root[vendors[i] + 'CancelRequest' + suffix]
+}
+
+// Some versions of FF have rAF but not cAF
+if(!raf || !caf) {
+  var last = 0
+    , id = 0
+    , queue = []
+    , frameDuration = 1000 / 60
+
+  raf = function(callback) {
+    if(queue.length === 0) {
+      var _now = now()
+        , next = Math.max(0, frameDuration - (_now - last))
+      last = next + _now
+      setTimeout(function() {
+        var cp = queue.slice(0)
+        // Clear queue here to prevent
+        // callbacks from appending listeners
+        // to the current frame's queue
+        queue.length = 0
+        for(var i = 0; i < cp.length; i++) {
+          if(!cp[i].cancelled) {
+            try{
+              cp[i].callback(last)
+            } catch(e) {
+              setTimeout(function() { throw e }, 0)
+            }
+          }
+        }
+      }, Math.round(next))
+    }
+    queue.push({
+      handle: ++id,
+      callback: callback,
+      cancelled: false
+    })
+    return id
+  }
+
+  caf = function(handle) {
+    for(var i = 0; i < queue.length; i++) {
+      if(queue[i].handle === handle) {
+        queue[i].cancelled = true
+      }
+    }
+  }
+}
+
+module.exports = function(fn) {
+  // Wrap in a new function to prevent
+  // `cancel` potentially being assigned
+  // to the native rAF function
+  return raf.call(root, fn)
+}
+module.exports.cancel = function() {
+  caf.apply(root, arguments)
+}
+module.exports.polyfill = function(object) {
+  if (!object) {
+    object = root;
+  }
+  object.requestAnimationFrame = raf
+  object.cancelAnimationFrame = caf
+}
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/Scrollbars/defaultRenderElements.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/Scrollbars/defaultRenderElements.js ***!
+  \**************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.renderViewDefault = renderViewDefault;
+exports.renderTrackHorizontalDefault = renderTrackHorizontalDefault;
+exports.renderTrackVerticalDefault = renderTrackVerticalDefault;
+exports.renderThumbHorizontalDefault = renderThumbHorizontalDefault;
+exports.renderThumbVerticalDefault = renderThumbVerticalDefault;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+/* eslint-disable react/prop-types */
+
+function renderViewDefault(props) {
+    return _react2["default"].createElement('div', props);
+}
+
+function renderTrackHorizontalDefault(_ref) {
+    var style = _ref.style,
+        props = _objectWithoutProperties(_ref, ['style']);
+
+    var finalStyle = _extends({}, style, {
+        right: 2,
+        bottom: 2,
+        left: 2,
+        borderRadius: 3
+    });
+    return _react2["default"].createElement('div', _extends({ style: finalStyle }, props));
+}
+
+function renderTrackVerticalDefault(_ref2) {
+    var style = _ref2.style,
+        props = _objectWithoutProperties(_ref2, ['style']);
+
+    var finalStyle = _extends({}, style, {
+        right: 2,
+        bottom: 2,
+        top: 2,
+        borderRadius: 3
+    });
+    return _react2["default"].createElement('div', _extends({ style: finalStyle }, props));
+}
+
+function renderThumbHorizontalDefault(_ref3) {
+    var style = _ref3.style,
+        props = _objectWithoutProperties(_ref3, ['style']);
+
+    var finalStyle = _extends({}, style, {
+        cursor: 'pointer',
+        borderRadius: 'inherit',
+        backgroundColor: 'rgba(0,0,0,.2)'
+    });
+    return _react2["default"].createElement('div', _extends({ style: finalStyle }, props));
+}
+
+function renderThumbVerticalDefault(_ref4) {
+    var style = _ref4.style,
+        props = _objectWithoutProperties(_ref4, ['style']);
+
+    var finalStyle = _extends({}, style, {
+        cursor: 'pointer',
+        borderRadius: 'inherit',
+        backgroundColor: 'rgba(0,0,0,.2)'
+    });
+    return _react2["default"].createElement('div', _extends({ style: finalStyle }, props));
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/Scrollbars/index.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/Scrollbars/index.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _raf2 = __webpack_require__(/*! raf */ "./node_modules/raf/index.js");
+
+var _raf3 = _interopRequireDefault(_raf2);
+
+var _domCss = __webpack_require__(/*! dom-css */ "./node_modules/dom-css/index.js");
+
+var _domCss2 = _interopRequireDefault(_domCss);
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _isString = __webpack_require__(/*! ../utils/isString */ "./node_modules/react-custom-scrollbars/lib/utils/isString.js");
+
+var _isString2 = _interopRequireDefault(_isString);
+
+var _getScrollbarWidth = __webpack_require__(/*! ../utils/getScrollbarWidth */ "./node_modules/react-custom-scrollbars/lib/utils/getScrollbarWidth.js");
+
+var _getScrollbarWidth2 = _interopRequireDefault(_getScrollbarWidth);
+
+var _returnFalse = __webpack_require__(/*! ../utils/returnFalse */ "./node_modules/react-custom-scrollbars/lib/utils/returnFalse.js");
+
+var _returnFalse2 = _interopRequireDefault(_returnFalse);
+
+var _getInnerWidth = __webpack_require__(/*! ../utils/getInnerWidth */ "./node_modules/react-custom-scrollbars/lib/utils/getInnerWidth.js");
+
+var _getInnerWidth2 = _interopRequireDefault(_getInnerWidth);
+
+var _getInnerHeight = __webpack_require__(/*! ../utils/getInnerHeight */ "./node_modules/react-custom-scrollbars/lib/utils/getInnerHeight.js");
+
+var _getInnerHeight2 = _interopRequireDefault(_getInnerHeight);
+
+var _styles = __webpack_require__(/*! ./styles */ "./node_modules/react-custom-scrollbars/lib/Scrollbars/styles.js");
+
+var _defaultRenderElements = __webpack_require__(/*! ./defaultRenderElements */ "./node_modules/react-custom-scrollbars/lib/Scrollbars/defaultRenderElements.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Scrollbars = function (_Component) {
+    _inherits(Scrollbars, _Component);
+
+    function Scrollbars(props) {
+        var _ref;
+
+        _classCallCheck(this, Scrollbars);
+
+        for (var _len = arguments.length, rest = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+            rest[_key - 1] = arguments[_key];
+        }
+
+        var _this = _possibleConstructorReturn(this, (_ref = Scrollbars.__proto__ || Object.getPrototypeOf(Scrollbars)).call.apply(_ref, [this, props].concat(rest)));
+
+        _this.getScrollLeft = _this.getScrollLeft.bind(_this);
+        _this.getScrollTop = _this.getScrollTop.bind(_this);
+        _this.getScrollWidth = _this.getScrollWidth.bind(_this);
+        _this.getScrollHeight = _this.getScrollHeight.bind(_this);
+        _this.getClientWidth = _this.getClientWidth.bind(_this);
+        _this.getClientHeight = _this.getClientHeight.bind(_this);
+        _this.getValues = _this.getValues.bind(_this);
+        _this.getThumbHorizontalWidth = _this.getThumbHorizontalWidth.bind(_this);
+        _this.getThumbVerticalHeight = _this.getThumbVerticalHeight.bind(_this);
+        _this.getScrollLeftForOffset = _this.getScrollLeftForOffset.bind(_this);
+        _this.getScrollTopForOffset = _this.getScrollTopForOffset.bind(_this);
+
+        _this.scrollLeft = _this.scrollLeft.bind(_this);
+        _this.scrollTop = _this.scrollTop.bind(_this);
+        _this.scrollToLeft = _this.scrollToLeft.bind(_this);
+        _this.scrollToTop = _this.scrollToTop.bind(_this);
+        _this.scrollToRight = _this.scrollToRight.bind(_this);
+        _this.scrollToBottom = _this.scrollToBottom.bind(_this);
+
+        _this.handleTrackMouseEnter = _this.handleTrackMouseEnter.bind(_this);
+        _this.handleTrackMouseLeave = _this.handleTrackMouseLeave.bind(_this);
+        _this.handleHorizontalTrackMouseDown = _this.handleHorizontalTrackMouseDown.bind(_this);
+        _this.handleVerticalTrackMouseDown = _this.handleVerticalTrackMouseDown.bind(_this);
+        _this.handleHorizontalThumbMouseDown = _this.handleHorizontalThumbMouseDown.bind(_this);
+        _this.handleVerticalThumbMouseDown = _this.handleVerticalThumbMouseDown.bind(_this);
+        _this.handleWindowResize = _this.handleWindowResize.bind(_this);
+        _this.handleScroll = _this.handleScroll.bind(_this);
+        _this.handleDrag = _this.handleDrag.bind(_this);
+        _this.handleDragEnd = _this.handleDragEnd.bind(_this);
+
+        _this.state = {
+            didMountUniversal: false
+        };
+        return _this;
+    }
+
+    _createClass(Scrollbars, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.addListeners();
+            this.update();
+            this.componentDidMountUniversal();
+        }
+    }, {
+        key: 'componentDidMountUniversal',
+        value: function componentDidMountUniversal() {
+            // eslint-disable-line react/sort-comp
+            var universal = this.props.universal;
+
+            if (!universal) return;
+            this.setState({ didMountUniversal: true });
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
+            this.update();
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            this.removeListeners();
+            (0, _raf2.cancel)(this.requestFrame);
+            clearTimeout(this.hideTracksTimeout);
+            clearInterval(this.detectScrollingInterval);
+        }
+    }, {
+        key: 'getScrollLeft',
+        value: function getScrollLeft() {
+            if (!this.view) return 0;
+            return this.view.scrollLeft;
+        }
+    }, {
+        key: 'getScrollTop',
+        value: function getScrollTop() {
+            if (!this.view) return 0;
+            return this.view.scrollTop;
+        }
+    }, {
+        key: 'getScrollWidth',
+        value: function getScrollWidth() {
+            if (!this.view) return 0;
+            return this.view.scrollWidth;
+        }
+    }, {
+        key: 'getScrollHeight',
+        value: function getScrollHeight() {
+            if (!this.view) return 0;
+            return this.view.scrollHeight;
+        }
+    }, {
+        key: 'getClientWidth',
+        value: function getClientWidth() {
+            if (!this.view) return 0;
+            return this.view.clientWidth;
+        }
+    }, {
+        key: 'getClientHeight',
+        value: function getClientHeight() {
+            if (!this.view) return 0;
+            return this.view.clientHeight;
+        }
+    }, {
+        key: 'getValues',
+        value: function getValues() {
+            var _ref2 = this.view || {},
+                _ref2$scrollLeft = _ref2.scrollLeft,
+                scrollLeft = _ref2$scrollLeft === undefined ? 0 : _ref2$scrollLeft,
+                _ref2$scrollTop = _ref2.scrollTop,
+                scrollTop = _ref2$scrollTop === undefined ? 0 : _ref2$scrollTop,
+                _ref2$scrollWidth = _ref2.scrollWidth,
+                scrollWidth = _ref2$scrollWidth === undefined ? 0 : _ref2$scrollWidth,
+                _ref2$scrollHeight = _ref2.scrollHeight,
+                scrollHeight = _ref2$scrollHeight === undefined ? 0 : _ref2$scrollHeight,
+                _ref2$clientWidth = _ref2.clientWidth,
+                clientWidth = _ref2$clientWidth === undefined ? 0 : _ref2$clientWidth,
+                _ref2$clientHeight = _ref2.clientHeight,
+                clientHeight = _ref2$clientHeight === undefined ? 0 : _ref2$clientHeight;
+
+            return {
+                left: scrollLeft / (scrollWidth - clientWidth) || 0,
+                top: scrollTop / (scrollHeight - clientHeight) || 0,
+                scrollLeft: scrollLeft,
+                scrollTop: scrollTop,
+                scrollWidth: scrollWidth,
+                scrollHeight: scrollHeight,
+                clientWidth: clientWidth,
+                clientHeight: clientHeight
+            };
+        }
+    }, {
+        key: 'getThumbHorizontalWidth',
+        value: function getThumbHorizontalWidth() {
+            var _props = this.props,
+                thumbSize = _props.thumbSize,
+                thumbMinSize = _props.thumbMinSize;
+            var _view = this.view,
+                scrollWidth = _view.scrollWidth,
+                clientWidth = _view.clientWidth;
+
+            var trackWidth = (0, _getInnerWidth2["default"])(this.trackHorizontal);
+            var width = Math.ceil(clientWidth / scrollWidth * trackWidth);
+            if (trackWidth === width) return 0;
+            if (thumbSize) return thumbSize;
+            return Math.max(width, thumbMinSize);
+        }
+    }, {
+        key: 'getThumbVerticalHeight',
+        value: function getThumbVerticalHeight() {
+            var _props2 = this.props,
+                thumbSize = _props2.thumbSize,
+                thumbMinSize = _props2.thumbMinSize;
+            var _view2 = this.view,
+                scrollHeight = _view2.scrollHeight,
+                clientHeight = _view2.clientHeight;
+
+            var trackHeight = (0, _getInnerHeight2["default"])(this.trackVertical);
+            var height = Math.ceil(clientHeight / scrollHeight * trackHeight);
+            if (trackHeight === height) return 0;
+            if (thumbSize) return thumbSize;
+            return Math.max(height, thumbMinSize);
+        }
+    }, {
+        key: 'getScrollLeftForOffset',
+        value: function getScrollLeftForOffset(offset) {
+            var _view3 = this.view,
+                scrollWidth = _view3.scrollWidth,
+                clientWidth = _view3.clientWidth;
+
+            var trackWidth = (0, _getInnerWidth2["default"])(this.trackHorizontal);
+            var thumbWidth = this.getThumbHorizontalWidth();
+            return offset / (trackWidth - thumbWidth) * (scrollWidth - clientWidth);
+        }
+    }, {
+        key: 'getScrollTopForOffset',
+        value: function getScrollTopForOffset(offset) {
+            var _view4 = this.view,
+                scrollHeight = _view4.scrollHeight,
+                clientHeight = _view4.clientHeight;
+
+            var trackHeight = (0, _getInnerHeight2["default"])(this.trackVertical);
+            var thumbHeight = this.getThumbVerticalHeight();
+            return offset / (trackHeight - thumbHeight) * (scrollHeight - clientHeight);
+        }
+    }, {
+        key: 'scrollLeft',
+        value: function scrollLeft() {
+            var left = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+            if (!this.view) return;
+            this.view.scrollLeft = left;
+        }
+    }, {
+        key: 'scrollTop',
+        value: function scrollTop() {
+            var top = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+            if (!this.view) return;
+            this.view.scrollTop = top;
+        }
+    }, {
+        key: 'scrollToLeft',
+        value: function scrollToLeft() {
+            if (!this.view) return;
+            this.view.scrollLeft = 0;
+        }
+    }, {
+        key: 'scrollToTop',
+        value: function scrollToTop() {
+            if (!this.view) return;
+            this.view.scrollTop = 0;
+        }
+    }, {
+        key: 'scrollToRight',
+        value: function scrollToRight() {
+            if (!this.view) return;
+            this.view.scrollLeft = this.view.scrollWidth;
+        }
+    }, {
+        key: 'scrollToBottom',
+        value: function scrollToBottom() {
+            if (!this.view) return;
+            this.view.scrollTop = this.view.scrollHeight;
+        }
+    }, {
+        key: 'addListeners',
+        value: function addListeners() {
+            /* istanbul ignore if */
+            if (typeof document === 'undefined' || !this.view) return;
+            var view = this.view,
+                trackHorizontal = this.trackHorizontal,
+                trackVertical = this.trackVertical,
+                thumbHorizontal = this.thumbHorizontal,
+                thumbVertical = this.thumbVertical;
+
+            view.addEventListener('scroll', this.handleScroll);
+            if (!(0, _getScrollbarWidth2["default"])()) return;
+            trackHorizontal.addEventListener('mouseenter', this.handleTrackMouseEnter);
+            trackHorizontal.addEventListener('mouseleave', this.handleTrackMouseLeave);
+            trackHorizontal.addEventListener('mousedown', this.handleHorizontalTrackMouseDown);
+            trackVertical.addEventListener('mouseenter', this.handleTrackMouseEnter);
+            trackVertical.addEventListener('mouseleave', this.handleTrackMouseLeave);
+            trackVertical.addEventListener('mousedown', this.handleVerticalTrackMouseDown);
+            thumbHorizontal.addEventListener('mousedown', this.handleHorizontalThumbMouseDown);
+            thumbVertical.addEventListener('mousedown', this.handleVerticalThumbMouseDown);
+            window.addEventListener('resize', this.handleWindowResize);
+        }
+    }, {
+        key: 'removeListeners',
+        value: function removeListeners() {
+            /* istanbul ignore if */
+            if (typeof document === 'undefined' || !this.view) return;
+            var view = this.view,
+                trackHorizontal = this.trackHorizontal,
+                trackVertical = this.trackVertical,
+                thumbHorizontal = this.thumbHorizontal,
+                thumbVertical = this.thumbVertical;
+
+            view.removeEventListener('scroll', this.handleScroll);
+            if (!(0, _getScrollbarWidth2["default"])()) return;
+            trackHorizontal.removeEventListener('mouseenter', this.handleTrackMouseEnter);
+            trackHorizontal.removeEventListener('mouseleave', this.handleTrackMouseLeave);
+            trackHorizontal.removeEventListener('mousedown', this.handleHorizontalTrackMouseDown);
+            trackVertical.removeEventListener('mouseenter', this.handleTrackMouseEnter);
+            trackVertical.removeEventListener('mouseleave', this.handleTrackMouseLeave);
+            trackVertical.removeEventListener('mousedown', this.handleVerticalTrackMouseDown);
+            thumbHorizontal.removeEventListener('mousedown', this.handleHorizontalThumbMouseDown);
+            thumbVertical.removeEventListener('mousedown', this.handleVerticalThumbMouseDown);
+            window.removeEventListener('resize', this.handleWindowResize);
+            // Possibly setup by `handleDragStart`
+            this.teardownDragging();
+        }
+    }, {
+        key: 'handleScroll',
+        value: function handleScroll(event) {
+            var _this2 = this;
+
+            var _props3 = this.props,
+                onScroll = _props3.onScroll,
+                onScrollFrame = _props3.onScrollFrame;
+
+            if (onScroll) onScroll(event);
+            this.update(function (values) {
+                var scrollLeft = values.scrollLeft,
+                    scrollTop = values.scrollTop;
+
+                _this2.viewScrollLeft = scrollLeft;
+                _this2.viewScrollTop = scrollTop;
+                if (onScrollFrame) onScrollFrame(values);
+            });
+            this.detectScrolling();
+        }
+    }, {
+        key: 'handleScrollStart',
+        value: function handleScrollStart() {
+            var onScrollStart = this.props.onScrollStart;
+
+            if (onScrollStart) onScrollStart();
+            this.handleScrollStartAutoHide();
+        }
+    }, {
+        key: 'handleScrollStartAutoHide',
+        value: function handleScrollStartAutoHide() {
+            var autoHide = this.props.autoHide;
+
+            if (!autoHide) return;
+            this.showTracks();
+        }
+    }, {
+        key: 'handleScrollStop',
+        value: function handleScrollStop() {
+            var onScrollStop = this.props.onScrollStop;
+
+            if (onScrollStop) onScrollStop();
+            this.handleScrollStopAutoHide();
+        }
+    }, {
+        key: 'handleScrollStopAutoHide',
+        value: function handleScrollStopAutoHide() {
+            var autoHide = this.props.autoHide;
+
+            if (!autoHide) return;
+            this.hideTracks();
+        }
+    }, {
+        key: 'handleWindowResize',
+        value: function handleWindowResize() {
+            this.update();
+        }
+    }, {
+        key: 'handleHorizontalTrackMouseDown',
+        value: function handleHorizontalTrackMouseDown(event) {
+            event.preventDefault();
+            var target = event.target,
+                clientX = event.clientX;
+
+            var _target$getBoundingCl = target.getBoundingClientRect(),
+                targetLeft = _target$getBoundingCl.left;
+
+            var thumbWidth = this.getThumbHorizontalWidth();
+            var offset = Math.abs(targetLeft - clientX) - thumbWidth / 2;
+            this.view.scrollLeft = this.getScrollLeftForOffset(offset);
+        }
+    }, {
+        key: 'handleVerticalTrackMouseDown',
+        value: function handleVerticalTrackMouseDown(event) {
+            event.preventDefault();
+            var target = event.target,
+                clientY = event.clientY;
+
+            var _target$getBoundingCl2 = target.getBoundingClientRect(),
+                targetTop = _target$getBoundingCl2.top;
+
+            var thumbHeight = this.getThumbVerticalHeight();
+            var offset = Math.abs(targetTop - clientY) - thumbHeight / 2;
+            this.view.scrollTop = this.getScrollTopForOffset(offset);
+        }
+    }, {
+        key: 'handleHorizontalThumbMouseDown',
+        value: function handleHorizontalThumbMouseDown(event) {
+            event.preventDefault();
+            this.handleDragStart(event);
+            var target = event.target,
+                clientX = event.clientX;
+            var offsetWidth = target.offsetWidth;
+
+            var _target$getBoundingCl3 = target.getBoundingClientRect(),
+                left = _target$getBoundingCl3.left;
+
+            this.prevPageX = offsetWidth - (clientX - left);
+        }
+    }, {
+        key: 'handleVerticalThumbMouseDown',
+        value: function handleVerticalThumbMouseDown(event) {
+            event.preventDefault();
+            this.handleDragStart(event);
+            var target = event.target,
+                clientY = event.clientY;
+            var offsetHeight = target.offsetHeight;
+
+            var _target$getBoundingCl4 = target.getBoundingClientRect(),
+                top = _target$getBoundingCl4.top;
+
+            this.prevPageY = offsetHeight - (clientY - top);
+        }
+    }, {
+        key: 'setupDragging',
+        value: function setupDragging() {
+            (0, _domCss2["default"])(document.body, _styles.disableSelectStyle);
+            document.addEventListener('mousemove', this.handleDrag);
+            document.addEventListener('mouseup', this.handleDragEnd);
+            document.onselectstart = _returnFalse2["default"];
+        }
+    }, {
+        key: 'teardownDragging',
+        value: function teardownDragging() {
+            (0, _domCss2["default"])(document.body, _styles.disableSelectStyleReset);
+            document.removeEventListener('mousemove', this.handleDrag);
+            document.removeEventListener('mouseup', this.handleDragEnd);
+            document.onselectstart = undefined;
+        }
+    }, {
+        key: 'handleDragStart',
+        value: function handleDragStart(event) {
+            this.dragging = true;
+            event.stopImmediatePropagation();
+            this.setupDragging();
+        }
+    }, {
+        key: 'handleDrag',
+        value: function handleDrag(event) {
+            if (this.prevPageX) {
+                var clientX = event.clientX;
+
+                var _trackHorizontal$getB = this.trackHorizontal.getBoundingClientRect(),
+                    trackLeft = _trackHorizontal$getB.left;
+
+                var thumbWidth = this.getThumbHorizontalWidth();
+                var clickPosition = thumbWidth - this.prevPageX;
+                var offset = -trackLeft + clientX - clickPosition;
+                this.view.scrollLeft = this.getScrollLeftForOffset(offset);
+            }
+            if (this.prevPageY) {
+                var clientY = event.clientY;
+
+                var _trackVertical$getBou = this.trackVertical.getBoundingClientRect(),
+                    trackTop = _trackVertical$getBou.top;
+
+                var thumbHeight = this.getThumbVerticalHeight();
+                var _clickPosition = thumbHeight - this.prevPageY;
+                var _offset = -trackTop + clientY - _clickPosition;
+                this.view.scrollTop = this.getScrollTopForOffset(_offset);
+            }
+            return false;
+        }
+    }, {
+        key: 'handleDragEnd',
+        value: function handleDragEnd() {
+            this.dragging = false;
+            this.prevPageX = this.prevPageY = 0;
+            this.teardownDragging();
+            this.handleDragEndAutoHide();
+        }
+    }, {
+        key: 'handleDragEndAutoHide',
+        value: function handleDragEndAutoHide() {
+            var autoHide = this.props.autoHide;
+
+            if (!autoHide) return;
+            this.hideTracks();
+        }
+    }, {
+        key: 'handleTrackMouseEnter',
+        value: function handleTrackMouseEnter() {
+            this.trackMouseOver = true;
+            this.handleTrackMouseEnterAutoHide();
+        }
+    }, {
+        key: 'handleTrackMouseEnterAutoHide',
+        value: function handleTrackMouseEnterAutoHide() {
+            var autoHide = this.props.autoHide;
+
+            if (!autoHide) return;
+            this.showTracks();
+        }
+    }, {
+        key: 'handleTrackMouseLeave',
+        value: function handleTrackMouseLeave() {
+            this.trackMouseOver = false;
+            this.handleTrackMouseLeaveAutoHide();
+        }
+    }, {
+        key: 'handleTrackMouseLeaveAutoHide',
+        value: function handleTrackMouseLeaveAutoHide() {
+            var autoHide = this.props.autoHide;
+
+            if (!autoHide) return;
+            this.hideTracks();
+        }
+    }, {
+        key: 'showTracks',
+        value: function showTracks() {
+            clearTimeout(this.hideTracksTimeout);
+            (0, _domCss2["default"])(this.trackHorizontal, { opacity: 1 });
+            (0, _domCss2["default"])(this.trackVertical, { opacity: 1 });
+        }
+    }, {
+        key: 'hideTracks',
+        value: function hideTracks() {
+            var _this3 = this;
+
+            if (this.dragging) return;
+            if (this.scrolling) return;
+            if (this.trackMouseOver) return;
+            var autoHideTimeout = this.props.autoHideTimeout;
+
+            clearTimeout(this.hideTracksTimeout);
+            this.hideTracksTimeout = setTimeout(function () {
+                (0, _domCss2["default"])(_this3.trackHorizontal, { opacity: 0 });
+                (0, _domCss2["default"])(_this3.trackVertical, { opacity: 0 });
+            }, autoHideTimeout);
+        }
+    }, {
+        key: 'detectScrolling',
+        value: function detectScrolling() {
+            var _this4 = this;
+
+            if (this.scrolling) return;
+            this.scrolling = true;
+            this.handleScrollStart();
+            this.detectScrollingInterval = setInterval(function () {
+                if (_this4.lastViewScrollLeft === _this4.viewScrollLeft && _this4.lastViewScrollTop === _this4.viewScrollTop) {
+                    clearInterval(_this4.detectScrollingInterval);
+                    _this4.scrolling = false;
+                    _this4.handleScrollStop();
+                }
+                _this4.lastViewScrollLeft = _this4.viewScrollLeft;
+                _this4.lastViewScrollTop = _this4.viewScrollTop;
+            }, 100);
+        }
+    }, {
+        key: 'raf',
+        value: function raf(callback) {
+            var _this5 = this;
+
+            if (this.requestFrame) _raf3["default"].cancel(this.requestFrame);
+            this.requestFrame = (0, _raf3["default"])(function () {
+                _this5.requestFrame = undefined;
+                callback();
+            });
+        }
+    }, {
+        key: 'update',
+        value: function update(callback) {
+            var _this6 = this;
+
+            this.raf(function () {
+                return _this6._update(callback);
+            });
+        }
+    }, {
+        key: '_update',
+        value: function _update(callback) {
+            var _props4 = this.props,
+                onUpdate = _props4.onUpdate,
+                hideTracksWhenNotNeeded = _props4.hideTracksWhenNotNeeded;
+
+            var values = this.getValues();
+            if ((0, _getScrollbarWidth2["default"])()) {
+                var scrollLeft = values.scrollLeft,
+                    clientWidth = values.clientWidth,
+                    scrollWidth = values.scrollWidth;
+
+                var trackHorizontalWidth = (0, _getInnerWidth2["default"])(this.trackHorizontal);
+                var thumbHorizontalWidth = this.getThumbHorizontalWidth();
+                var thumbHorizontalX = scrollLeft / (scrollWidth - clientWidth) * (trackHorizontalWidth - thumbHorizontalWidth);
+                var thumbHorizontalStyle = {
+                    width: thumbHorizontalWidth,
+                    transform: 'translateX(' + thumbHorizontalX + 'px)'
+                };
+                var scrollTop = values.scrollTop,
+                    clientHeight = values.clientHeight,
+                    scrollHeight = values.scrollHeight;
+
+                var trackVerticalHeight = (0, _getInnerHeight2["default"])(this.trackVertical);
+                var thumbVerticalHeight = this.getThumbVerticalHeight();
+                var thumbVerticalY = scrollTop / (scrollHeight - clientHeight) * (trackVerticalHeight - thumbVerticalHeight);
+                var thumbVerticalStyle = {
+                    height: thumbVerticalHeight,
+                    transform: 'translateY(' + thumbVerticalY + 'px)'
+                };
+                if (hideTracksWhenNotNeeded) {
+                    var trackHorizontalStyle = {
+                        visibility: scrollWidth > clientWidth ? 'visible' : 'hidden'
+                    };
+                    var trackVerticalStyle = {
+                        visibility: scrollHeight > clientHeight ? 'visible' : 'hidden'
+                    };
+                    (0, _domCss2["default"])(this.trackHorizontal, trackHorizontalStyle);
+                    (0, _domCss2["default"])(this.trackVertical, trackVerticalStyle);
+                }
+                (0, _domCss2["default"])(this.thumbHorizontal, thumbHorizontalStyle);
+                (0, _domCss2["default"])(this.thumbVertical, thumbVerticalStyle);
+            }
+            if (onUpdate) onUpdate(values);
+            if (typeof callback !== 'function') return;
+            callback(values);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this7 = this;
+
+            var scrollbarWidth = (0, _getScrollbarWidth2["default"])();
+            /* eslint-disable no-unused-vars */
+
+            var _props5 = this.props,
+                onScroll = _props5.onScroll,
+                onScrollFrame = _props5.onScrollFrame,
+                onScrollStart = _props5.onScrollStart,
+                onScrollStop = _props5.onScrollStop,
+                onUpdate = _props5.onUpdate,
+                renderView = _props5.renderView,
+                renderTrackHorizontal = _props5.renderTrackHorizontal,
+                renderTrackVertical = _props5.renderTrackVertical,
+                renderThumbHorizontal = _props5.renderThumbHorizontal,
+                renderThumbVertical = _props5.renderThumbVertical,
+                tagName = _props5.tagName,
+                hideTracksWhenNotNeeded = _props5.hideTracksWhenNotNeeded,
+                autoHide = _props5.autoHide,
+                autoHideTimeout = _props5.autoHideTimeout,
+                autoHideDuration = _props5.autoHideDuration,
+                thumbSize = _props5.thumbSize,
+                thumbMinSize = _props5.thumbMinSize,
+                universal = _props5.universal,
+                autoHeight = _props5.autoHeight,
+                autoHeightMin = _props5.autoHeightMin,
+                autoHeightMax = _props5.autoHeightMax,
+                style = _props5.style,
+                children = _props5.children,
+                props = _objectWithoutProperties(_props5, ['onScroll', 'onScrollFrame', 'onScrollStart', 'onScrollStop', 'onUpdate', 'renderView', 'renderTrackHorizontal', 'renderTrackVertical', 'renderThumbHorizontal', 'renderThumbVertical', 'tagName', 'hideTracksWhenNotNeeded', 'autoHide', 'autoHideTimeout', 'autoHideDuration', 'thumbSize', 'thumbMinSize', 'universal', 'autoHeight', 'autoHeightMin', 'autoHeightMax', 'style', 'children']);
+            /* eslint-enable no-unused-vars */
+
+            var didMountUniversal = this.state.didMountUniversal;
+
+
+            var containerStyle = _extends({}, _styles.containerStyleDefault, autoHeight && _extends({}, _styles.containerStyleAutoHeight, {
+                minHeight: autoHeightMin,
+                maxHeight: autoHeightMax
+            }), style);
+
+            var viewStyle = _extends({}, _styles.viewStyleDefault, {
+                // Hide scrollbars by setting a negative margin
+                marginRight: scrollbarWidth ? -scrollbarWidth : 0,
+                marginBottom: scrollbarWidth ? -scrollbarWidth : 0
+            }, autoHeight && _extends({}, _styles.viewStyleAutoHeight, {
+                // Add scrollbarWidth to autoHeight in order to compensate negative margins
+                minHeight: (0, _isString2["default"])(autoHeightMin) ? 'calc(' + autoHeightMin + ' + ' + scrollbarWidth + 'px)' : autoHeightMin + scrollbarWidth,
+                maxHeight: (0, _isString2["default"])(autoHeightMax) ? 'calc(' + autoHeightMax + ' + ' + scrollbarWidth + 'px)' : autoHeightMax + scrollbarWidth
+            }), autoHeight && universal && !didMountUniversal && {
+                minHeight: autoHeightMin,
+                maxHeight: autoHeightMax
+            }, universal && !didMountUniversal && _styles.viewStyleUniversalInitial);
+
+            var trackAutoHeightStyle = {
+                transition: 'opacity ' + autoHideDuration + 'ms',
+                opacity: 0
+            };
+
+            var trackHorizontalStyle = _extends({}, _styles.trackHorizontalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
+                display: 'none'
+            });
+
+            var trackVerticalStyle = _extends({}, _styles.trackVerticalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
+                display: 'none'
+            });
+
+            return (0, _react.createElement)(tagName, _extends({}, props, { style: containerStyle, ref: function ref(_ref3) {
+                    _this7.container = _ref3;
+                } }), [(0, _react.cloneElement)(renderView({ style: viewStyle }), { key: 'view', ref: function ref(_ref4) {
+                    _this7.view = _ref4;
+                } }, children), (0, _react.cloneElement)(renderTrackHorizontal({ style: trackHorizontalStyle }), { key: 'trackHorizontal', ref: function ref(_ref5) {
+                    _this7.trackHorizontal = _ref5;
+                } }, (0, _react.cloneElement)(renderThumbHorizontal({ style: _styles.thumbHorizontalStyleDefault }), { ref: function ref(_ref6) {
+                    _this7.thumbHorizontal = _ref6;
+                } })), (0, _react.cloneElement)(renderTrackVertical({ style: trackVerticalStyle }), { key: 'trackVertical', ref: function ref(_ref7) {
+                    _this7.trackVertical = _ref7;
+                } }, (0, _react.cloneElement)(renderThumbVertical({ style: _styles.thumbVerticalStyleDefault }), { ref: function ref(_ref8) {
+                    _this7.thumbVertical = _ref8;
+                } }))]);
+        }
+    }]);
+
+    return Scrollbars;
+}(_react.Component);
+
+exports["default"] = Scrollbars;
+
+
+Scrollbars.propTypes = {
+    onScroll: _propTypes2["default"].func,
+    onScrollFrame: _propTypes2["default"].func,
+    onScrollStart: _propTypes2["default"].func,
+    onScrollStop: _propTypes2["default"].func,
+    onUpdate: _propTypes2["default"].func,
+    renderView: _propTypes2["default"].func,
+    renderTrackHorizontal: _propTypes2["default"].func,
+    renderTrackVertical: _propTypes2["default"].func,
+    renderThumbHorizontal: _propTypes2["default"].func,
+    renderThumbVertical: _propTypes2["default"].func,
+    tagName: _propTypes2["default"].string,
+    thumbSize: _propTypes2["default"].number,
+    thumbMinSize: _propTypes2["default"].number,
+    hideTracksWhenNotNeeded: _propTypes2["default"].bool,
+    autoHide: _propTypes2["default"].bool,
+    autoHideTimeout: _propTypes2["default"].number,
+    autoHideDuration: _propTypes2["default"].number,
+    autoHeight: _propTypes2["default"].bool,
+    autoHeightMin: _propTypes2["default"].oneOfType([_propTypes2["default"].number, _propTypes2["default"].string]),
+    autoHeightMax: _propTypes2["default"].oneOfType([_propTypes2["default"].number, _propTypes2["default"].string]),
+    universal: _propTypes2["default"].bool,
+    style: _propTypes2["default"].object,
+    children: _propTypes2["default"].node
+};
+
+Scrollbars.defaultProps = {
+    renderView: _defaultRenderElements.renderViewDefault,
+    renderTrackHorizontal: _defaultRenderElements.renderTrackHorizontalDefault,
+    renderTrackVertical: _defaultRenderElements.renderTrackVerticalDefault,
+    renderThumbHorizontal: _defaultRenderElements.renderThumbHorizontalDefault,
+    renderThumbVertical: _defaultRenderElements.renderThumbVerticalDefault,
+    tagName: 'div',
+    thumbMinSize: 30,
+    hideTracksWhenNotNeeded: false,
+    autoHide: false,
+    autoHideTimeout: 1000,
+    autoHideDuration: 200,
+    autoHeight: false,
+    autoHeightMin: 0,
+    autoHeightMax: 200,
+    universal: false
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/Scrollbars/styles.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/Scrollbars/styles.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var containerStyleDefault = exports.containerStyleDefault = {
+    position: 'relative',
+    overflow: 'hidden',
+    width: '100%',
+    height: '100%'
+};
+
+// Overrides containerStyleDefault properties
+var containerStyleAutoHeight = exports.containerStyleAutoHeight = {
+    height: 'auto'
+};
+
+var viewStyleDefault = exports.viewStyleDefault = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    overflow: 'scroll',
+    WebkitOverflowScrolling: 'touch'
+};
+
+// Overrides viewStyleDefault properties
+var viewStyleAutoHeight = exports.viewStyleAutoHeight = {
+    position: 'relative',
+    top: undefined,
+    left: undefined,
+    right: undefined,
+    bottom: undefined
+};
+
+var viewStyleUniversalInitial = exports.viewStyleUniversalInitial = {
+    overflow: 'hidden',
+    marginRight: 0,
+    marginBottom: 0
+};
+
+var trackHorizontalStyleDefault = exports.trackHorizontalStyleDefault = {
+    position: 'absolute',
+    height: 6
+};
+
+var trackVerticalStyleDefault = exports.trackVerticalStyleDefault = {
+    position: 'absolute',
+    width: 6
+};
+
+var thumbHorizontalStyleDefault = exports.thumbHorizontalStyleDefault = {
+    position: 'relative',
+    display: 'block',
+    height: '100%'
+};
+
+var thumbVerticalStyleDefault = exports.thumbVerticalStyleDefault = {
+    position: 'relative',
+    display: 'block',
+    width: '100%'
+};
+
+var disableSelectStyle = exports.disableSelectStyle = {
+    userSelect: 'none'
+};
+
+var disableSelectStyleReset = exports.disableSelectStyleReset = {
+    userSelect: ''
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Scrollbars = undefined;
+
+var _Scrollbars = __webpack_require__(/*! ./Scrollbars */ "./node_modules/react-custom-scrollbars/lib/Scrollbars/index.js");
+
+var _Scrollbars2 = _interopRequireDefault(_Scrollbars);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+exports["default"] = _Scrollbars2["default"];
+exports.Scrollbars = _Scrollbars2["default"];
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/utils/getInnerHeight.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/utils/getInnerHeight.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = getInnerHeight;
+function getInnerHeight(el) {
+    var clientHeight = el.clientHeight;
+
+    var _getComputedStyle = getComputedStyle(el),
+        paddingTop = _getComputedStyle.paddingTop,
+        paddingBottom = _getComputedStyle.paddingBottom;
+
+    return clientHeight - parseFloat(paddingTop) - parseFloat(paddingBottom);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/utils/getInnerWidth.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/utils/getInnerWidth.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = getInnerWidth;
+function getInnerWidth(el) {
+    var clientWidth = el.clientWidth;
+
+    var _getComputedStyle = getComputedStyle(el),
+        paddingLeft = _getComputedStyle.paddingLeft,
+        paddingRight = _getComputedStyle.paddingRight;
+
+    return clientWidth - parseFloat(paddingLeft) - parseFloat(paddingRight);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/utils/getScrollbarWidth.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/utils/getScrollbarWidth.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = getScrollbarWidth;
+
+var _domCss = __webpack_require__(/*! dom-css */ "./node_modules/dom-css/index.js");
+
+var _domCss2 = _interopRequireDefault(_domCss);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var scrollbarWidth = false;
+
+function getScrollbarWidth() {
+    if (scrollbarWidth !== false) return scrollbarWidth;
+    /* istanbul ignore else */
+    if (typeof document !== 'undefined') {
+        var div = document.createElement('div');
+        (0, _domCss2["default"])(div, {
+            width: 100,
+            height: 100,
+            position: 'absolute',
+            top: -9999,
+            overflow: 'scroll',
+            MsOverflowStyle: 'scrollbar'
+        });
+        document.body.appendChild(div);
+        scrollbarWidth = div.offsetWidth - div.clientWidth;
+        document.body.removeChild(div);
+    } else {
+        scrollbarWidth = 0;
+    }
+    return scrollbarWidth || 0;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/utils/isString.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/utils/isString.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = isString;
+function isString(maybe) {
+    return typeof maybe === 'string';
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-custom-scrollbars/lib/utils/returnFalse.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/react-custom-scrollbars/lib/utils/returnFalse.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = returnFalse;
+function returnFalse() {
+    return false;
+}
 
 /***/ }),
 
@@ -60501,7 +62102,7 @@ if (false) {} else {
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
   \***************************************************************/
-/*! exports provided: BrowserRouter, HashRouter, Link, NavLink, MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext */
+/*! exports provided: MemoryRouter, Prompt, Redirect, Route, Router, StaticRouter, Switch, generatePath, matchPath, withRouter, __RouterContext, BrowserRouter, HashRouter, Link, NavLink */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65937,6 +67538,515 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
@@ -65994,6 +68104,148 @@ function warning(condition, message) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (warning);
+
+
+/***/ }),
+
+/***/ "./node_modules/to-camel-case/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/to-camel-case/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var space = __webpack_require__(/*! to-space-case */ "./node_modules/to-space-case/index.js")
+
+/**
+ * Export.
+ */
+
+module.exports = toCamelCase
+
+/**
+ * Convert a `string` to camel case.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function toCamelCase(string) {
+  return space(string).replace(/\s(\w)/g, function (matches, letter) {
+    return letter.toUpperCase()
+  })
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/to-no-case/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/to-no-case/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * Export.
+ */
+
+module.exports = toNoCase
+
+/**
+ * Test whether a string is camel-case.
+ */
+
+var hasSpace = /\s/
+var hasSeparator = /(_|-|\.|:)/
+var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/
+
+/**
+ * Remove any starting case from a `string`, like camel or snake, but keep
+ * spaces and punctuation that may be important otherwise.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function toNoCase(string) {
+  if (hasSpace.test(string)) return string.toLowerCase()
+  if (hasSeparator.test(string)) return (unseparate(string) || string).toLowerCase()
+  if (hasCamel.test(string)) return uncamelize(string).toLowerCase()
+  return string.toLowerCase()
+}
+
+/**
+ * Separator splitter.
+ */
+
+var separatorSplitter = /[\W_]+(.|$)/g
+
+/**
+ * Un-separate a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function unseparate(string) {
+  return string.replace(separatorSplitter, function (m, next) {
+    return next ? ' ' + next : ''
+  })
+}
+
+/**
+ * Camelcase splitter.
+ */
+
+var camelSplitter = /(.)([A-Z]+)/g
+
+/**
+ * Un-camelcase a `string`.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function uncamelize(string) {
+  return string.replace(camelSplitter, function (m, previous, uppers) {
+    return previous + ' ' + uppers.toLowerCase().split('').join(' ')
+  })
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/to-space-case/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/to-space-case/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var clean = __webpack_require__(/*! to-no-case */ "./node_modules/to-no-case/index.js")
+
+/**
+ * Export.
+ */
+
+module.exports = toSpaceCase
+
+/**
+ * Convert a `string` to space case.
+ *
+ * @param {String} string
+ * @return {String}
+ */
+
+function toSpaceCase(string) {
+  return clean(string).replace(/[\W_]+(.|$)/g, function (matches, match) {
+    return match ? ' ' + match : ''
+  }).trim()
+}
 
 
 /***/ }),
@@ -66121,72 +68373,14 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./components/App */ "./resources/js/components/App.js");
+__webpack_require__(/*! ./app/App */ "./resources/js/app/App.js");
 
 /***/ }),
 
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
-  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-
-  __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-} catch (e) {}
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-// import Echo from 'laravel-echo'
-// window.Pusher = require('pusher-js');
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
-
-/***/ }),
-
-/***/ "./resources/js/components/App.js":
-/*!****************************************!*\
-  !*** ./resources/js/components/App.js ***!
-  \****************************************/
+/***/ "./resources/js/app/App.js":
+/*!*********************************!*\
+  !*** ./resources/js/app/App.js ***!
+  \*********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66197,10 +68391,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _HeaderComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HeaderComponent */ "./resources/js/components/HeaderComponent.js");
-/* harmony import */ var _ProductListComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ProductListComponent */ "./resources/js/components/ProductListComponent.js");
-/* harmony import */ var _NewProductComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./NewProductComponent */ "./resources/js/components/NewProductComponent.js");
-/* harmony import */ var _EditProductComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EditProductComponent */ "./resources/js/components/EditProductComponent.js");
+/* harmony import */ var _header_HeaderComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header/HeaderComponent */ "./resources/js/app/header/HeaderComponent.js");
+/* harmony import */ var _product_ProductListComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./product/ProductListComponent */ "./resources/js/app/product/ProductListComponent.js");
+/* harmony import */ var _product_NewProductComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./product/NewProductComponent */ "./resources/js/app/product/NewProductComponent.js");
+/* harmony import */ var _product_EditProductComponent__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./product/EditProductComponent */ "./resources/js/app/product/EditProductComponent.js");
+/* harmony import */ var _buy_BuyComponent__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buy/BuyComponent */ "./resources/js/app/buy/BuyComponent.js");
+/* harmony import */ var _checkout_CheckoutComponent__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./checkout/CheckoutComponent */ "./resources/js/app/checkout/CheckoutComponent.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66218,6 +68414,8 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
 
 
 
@@ -66244,16 +68442,22 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], {
         basename: base
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_HeaderComponent__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_header_HeaderComponent__WEBPACK_IMPORTED_MODULE_3__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         exact: true,
         path: "/",
-        component: _ProductListComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
+        component: _product_ProductListComponent__WEBPACK_IMPORTED_MODULE_4__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/create",
-        component: _NewProductComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
+        component: _product_NewProductComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
         path: "/product/edit/:id",
-        component: _EditProductComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
+        component: _product_EditProductComponent__WEBPACK_IMPORTED_MODULE_6__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/buy",
+        component: _buy_BuyComponent__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+        path: "/checkout",
+        component: _checkout_CheckoutComponent__WEBPACK_IMPORTED_MODULE_8__["default"]
       }))));
     }
   }]);
@@ -66265,10 +68469,461 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ }),
 
-/***/ "./resources/js/components/EditProductComponent.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/EditProductComponent.js ***!
-  \*********************************************************/
+/***/ "./resources/js/app/buy/Buy.scss":
+/*!***************************************!*\
+  !*** ./resources/js/app/buy/Buy.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/lib/loader.js??ref--7-3!./Buy.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/Buy.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/BuyComponent.js":
+/*!**********************************************!*\
+  !*** ./resources/js/app/buy/BuyComponent.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./resources/js/config/api.js");
+/* harmony import */ var _components_productCart_ProductComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/productCart/ProductComponent */ "./resources/js/app/buy/components/productCart/ProductComponent.js");
+/* harmony import */ var _components_productList_ProductListComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/productList/ProductListComponent */ "./resources/js/app/buy/components/productList/ProductListComponent.js");
+/* harmony import */ var _Buy_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Buy.scss */ "./resources/js/app/buy/Buy.scss");
+/* harmony import */ var _Buy_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_Buy_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_custom_scrollbars__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-custom-scrollbars */ "./node_modules/react-custom-scrollbars/lib/index.js");
+/* harmony import */ var react_custom_scrollbars__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_custom_scrollbars__WEBPACK_IMPORTED_MODULE_7__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+
+
+var Buy =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Buy, _Component);
+
+  function Buy() {
+    var _this;
+
+    _classCallCheck(this, Buy);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Buy).call(this));
+    _this.state = {
+      products: [],
+      productsBuy: [],
+      headers: [],
+      total: 0
+    };
+    return _this;
+  }
+
+  _createClass(Buy, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_config_api__WEBPACK_IMPORTED_MODULE_3__["default"].PRODUCTS)).then(function (response) {
+        if (response.data.response.length > 0) {
+          _this2.setState({
+            products: response.data.response
+          });
+
+          var headers = Object.keys(_this2.state.products[0]).slice(0, -4);
+          headers.push(Object.keys(_this2.state.products[0])[Object.keys(_this2.state.products[0]).length - 1]);
+          headers.push("Options");
+
+          _this2.setState({
+            headers: headers
+          });
+        }
+      });
+    }
+  }, {
+    key: "handleSubsProduct",
+    value: function handleSubsProduct(product, prop) {
+      var productFind = prop.state.productsBuy.filter(function (elem, index) {
+        if (elem.id == product.id) {
+          elem.quantity -= 1;
+          elem.total = parseFloat(elem.price * elem.quantity);
+
+          if (elem.quantity == 0) {
+            prop.state.productsBuy.splice(index, 1);
+          }
+
+          return elem;
+        }
+      });
+
+      if (productFind.length > 0) {
+        prop.setState({
+          productsBuy: prop.state.productsBuy
+        });
+      }
+
+      prop.updateTotal();
+    }
+  }, {
+    key: "handleAddProduct",
+    value: function handleAddProduct(product, prop) {
+      var productFind = prop.state.productsBuy.filter(function (elem) {
+        if (elem.id == product.id) {
+          elem.quantity += 1;
+          elem.total = parseFloat(elem.price * elem.quantity);
+          return elem;
+        }
+      });
+
+      if (productFind.length > 0) {
+        prop.setState({
+          productsBuy: prop.state.productsBuy
+        });
+      } else {
+        var newProd = {};
+        newProd.id = product.id;
+        newProd.name = product.name;
+        newProd.quantity = 1;
+        newProd.price = parseFloat(product.price);
+        newProd.total = parseFloat(product.price * newProd.quantity);
+        prop.state.productsBuy.push(newProd);
+        prop.setState({
+          productsBuy: prop.state.productsBuy
+        });
+      }
+
+      prop.updateTotal();
+    }
+  }, {
+    key: "updateTotal",
+    value: function updateTotal() {
+      var total = 0;
+      this.state.productsBuy.map(function (elem) {
+        return total += elem.total;
+      });
+      this.setState({
+        total: total
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var _this$state = this.state,
+          products = _this$state.products,
+          productsBuy = _this$state.productsBuy,
+          total = _this$state.total;
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "container py-4"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "row no-gutters"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "custom-col-products col-12 col-sm-6 col-md-8"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Products"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_custom_scrollbars__WEBPACK_IMPORTED_MODULE_7__["Scrollbars"], {
+        style: {
+          height: 600
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "custom-col-container"
+      }, products && products.map(function (product) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_productCart_ProductComponent__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          bind: _this3,
+          handleAddProduct: _this3.handleAddProduct,
+          product: product,
+          key: product.id
+        });
+      }), !products && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", null, "There is not products")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "custom-col-cart col-12 col-md-3"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Cart"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_custom_scrollbars__WEBPACK_IMPORTED_MODULE_7__["Scrollbars"], {
+        style: {
+          height: 600
+        }
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "custom-col-container"
+      }, productsBuy.length > 0 && productsBuy.map(function (product) {
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_productList_ProductListComponent__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          bind: _this3,
+          handleAddProduct: _this3.handleAddProduct,
+          handleSubsProduct: _this3.handleSubsProduct,
+          product: product,
+          key: product.id
+        });
+      }), productsBuy.length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "Buy-checkout"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        className: "Buy-total"
+      }, "Total: $", total), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: {
+          pathname: '/checkout',
+          state: {
+            productsBuy: productsBuy,
+            total: total
+          }
+        },
+        className: "btn btn-secondary"
+      }, "Checkout >")), productsBuy.length <= 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "There is not products"))))));
+    }
+  }]);
+
+  return Buy;
+}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Buy);
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/components/product.png":
+/*!*****************************************************!*\
+  !*** ./resources/js/app/buy/components/product.png ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/product.png?edde194ea55a796d2844304d8c653c4a";
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/components/productCart/Product.scss":
+/*!******************************************************************!*\
+  !*** ./resources/js/app/buy/components/productCart/Product.scss ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/lib/loader.js??ref--7-3!./Product.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/components/productCart/Product.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/components/productCart/ProductComponent.js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/app/buy/components/productCart/ProductComponent.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Product_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Product.scss */ "./resources/js/app/buy/components/productCart/Product.scss");
+/* harmony import */ var _Product_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Product_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _product_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../product.png */ "./resources/js/app/buy/components/product.png");
+/* harmony import */ var _product_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_product_png__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function Product(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Product"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "badge ".concat(props.product.quantity == 0 ? 'badge-Secondary' : 'badge-success')
+  }, props.product.quantity == 0 ? "Outstock" : "Avaliable", "  "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _product_png__WEBPACK_IMPORTED_MODULE_2___default.a.substring(1)
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "Product-name"
+  }, props.product.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "custom-col-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "Product-price"
+  }, "Price: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "$", props.product.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      props.handleAddProduct(props.product, props.bind);
+    },
+    className: "btn btn-primary",
+    disabled: props.product.quantity == 0 ? true : false
+  }, "Add")));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Product);
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/components/productList/ProductList.scss":
+/*!**********************************************************************!*\
+  !*** ./resources/js/app/buy/components/productList/ProductList.scss ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/lib/loader.js??ref--7-3!./ProductList.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/buy/components/productList/ProductList.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/app/buy/components/productList/ProductListComponent.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/app/buy/components/productList/ProductListComponent.js ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ProductList_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductList.scss */ "./resources/js/app/buy/components/productList/ProductList.scss");
+/* harmony import */ var _ProductList_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ProductList_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _product_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../product.png */ "./resources/js/app/buy/components/product.png");
+/* harmony import */ var _product_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_product_png__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function ProductList(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductList"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: _product_png__WEBPACK_IMPORTED_MODULE_2___default.a.substring(1)
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductList-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "ProductList-name"
+  }, props.product.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "ProductList-price"
+  }, "Price: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "$", props.product.price)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ProductList-controls"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      props.handleSubsProduct(props.product, props.bind);
+    },
+    className: "btn btn-danger",
+    disabled: props.product.quantity == 0 ? true : false
+  }, "-"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "ProductList-price"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, props.product.quantity)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      props.handleAddProduct(props.product, props.bind);
+    },
+    disabled: props.product.quantity == 0 ? true : false,
+    className: "btn btn-primary"
+  }, "+"))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ProductList);
+
+/***/ }),
+
+/***/ "./resources/js/app/checkout/Checkout.scss":
+/*!*************************************************!*\
+  !*** ./resources/js/app/checkout/Checkout.scss ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader!../../../../node_modules/postcss-loader/src??ref--7-2!../../../../node_modules/sass-loader/lib/loader.js??ref--7-3!./Checkout.scss */ "./node_modules/css-loader/index.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./resources/js/app/checkout/Checkout.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/app/checkout/CheckoutComponent.js":
+/*!********************************************************!*\
+  !*** ./resources/js/app/checkout/CheckoutComponent.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66280,7 +68935,305 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config/api */ "./resources/js/config/api.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./resources/js/config/api.js");
+/* harmony import */ var _Checkout_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Checkout.scss */ "./resources/js/app/checkout/Checkout.scss");
+/* harmony import */ var _Checkout_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Checkout_scss__WEBPACK_IMPORTED_MODULE_4__);
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+var CheckoutComponent =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(CheckoutComponent, _Component);
+
+  function CheckoutComponent(props) {
+    var _this;
+
+    _classCallCheck(this, CheckoutComponent);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(CheckoutComponent).call(this, props));
+    var total, productsBuy;
+
+    if (props.location.state && props.location.state.total) {
+      total = props.location.state.total;
+      productsBuy = props.location.state.productsBuy;
+    } else {
+      _this.props.history.push('/');
+    }
+
+    _this.state = {
+      total: total ? total : 0,
+      productsBuy: productsBuy ? productsBuy : [],
+      client_name: '',
+      client_email: '',
+      errors: [],
+      invoice: '',
+      totalPurchase: 0
+    };
+    _this.handleFieldChange = _this.handleFieldChange.bind(_assertThisInitialized(_this));
+    _this.handleCheckout = _this.handleCheckout.bind(_assertThisInitialized(_this));
+    _this.hasErrorFor = _this.hasErrorFor.bind(_assertThisInitialized(_this));
+    _this.renderErrorFor = _this.renderErrorFor.bind(_assertThisInitialized(_this));
+    _this.handleBack = _this.handleBack.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(CheckoutComponent, [{
+    key: "handleFieldChange",
+    value: function handleFieldChange(event) {
+      this.setState(_defineProperty({}, event.target.name, event.target.value));
+    }
+  }, {
+    key: "handleCheckout",
+    value: function () {
+      var _handleCheckout = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(event) {
+        var _this2 = this;
+
+        var history, purchase;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                event.preventDefault();
+                history = this.props.history;
+                purchase = {
+                  products: this.state.productsBuy,
+                  total: this.state.total,
+                  client_name: this.state.client_name,
+                  client_email: this.state.client_email
+                };
+                _context.next = 5;
+                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config_api__WEBPACK_IMPORTED_MODULE_3__["default"].BUY), purchase).then(function (response) {
+                  // redirect to the homepage
+                  //history.push('/')
+                  console.log(response.data.response);
+
+                  _this2.setState({
+                    invoice: response.data.response.invoice,
+                    totalPurchase: response.data.response.total,
+                    total: []
+                  });
+                })["catch"](function (error) {
+                  _this2.setState({
+                    errors: error.response.data.error
+                  });
+                });
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function handleCheckout(_x) {
+        return _handleCheckout.apply(this, arguments);
+      }
+
+      return handleCheckout;
+    }()
+  }, {
+    key: "hasErrorFor",
+    value: function hasErrorFor(field) {
+      return !!this.state.errors[field];
+    }
+  }, {
+    key: "renderErrorFor",
+    value: function renderErrorFor(field) {
+      if (this.hasErrorFor(field)) {
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+          className: "invalid-feedback"
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("strong", null, this.state.errors[field][0]));
+      }
+    }
+  }, {
+    key: "handleBack",
+    value: function handleBack(event) {
+      if (this.props.location.state) {
+        this.props.history.replace({
+          pathname: this.props.location.pathname,
+          state: {}
+        });
+      }
+
+      this.props.history.push('/buy');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          total = _this$state.total,
+          invoice = _this$state.invoice,
+          productsBuy = _this$state.productsBuy,
+          totalPurchase = _this$state.totalPurchase;
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "container py-4"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "row justify-content-center"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "col-md-6"
+      }, invoice != '' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card-header"
+      }, "Purchase Detail"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "checkout-detail"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("table", {
+        className: "table"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("thead", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", null, "Product Name"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", null, "Product Quantity"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("th", null, "Subtotal"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tbody", null, productsBuy.map(function (elem) {
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, elem.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, elem.quantity), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, "$", elem.total));
+      })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tfoot", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", null, "Total")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("td", null, "$", totalPurchase))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "invoice"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "In case you want to ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", null, "cancel"), " the purchase use this invoice code "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+        className: "invoice-detail"
+      }, invoice)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+        className: "btn btn-primary",
+        onClick: this.handleBack
+      }, "Go back"))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("form", {
+        onSubmit: this.handleCheckout
+      }, total != 0 && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card-header"
+      }, "Who is Buying?"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "card-body"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
+        htmlFor: "name"
+      }, "Client name"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
+        id: "client_name",
+        type: "text",
+        className: "form-control ".concat(this.hasErrorFor('client_name') ? 'is-invalid' : ''),
+        name: "client_name",
+        value: this.state.client_name,
+        onChange: this.handleFieldChange
+      }), this.renderErrorFor('client_name')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
+        htmlFor: "name"
+      }, "Client email"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
+        id: "client_email",
+        type: "email",
+        className: "form-control ".concat(this.hasErrorFor('client_email') ? 'is-invalid' : ''),
+        name: "client_email",
+        value: this.state.client_email,
+        onChange: this.handleFieldChange
+      }), this.renderErrorFor('client_email')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "container-space-between"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+        className: "btn btn-primary"
+      }, "Finish"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+        className: "btn btn-danger",
+        onClick: this.handleBack
+      }, "Cancel"))))))));
+    }
+  }]);
+
+  return CheckoutComponent;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (CheckoutComponent);
+
+/***/ }),
+
+/***/ "./resources/js/app/header/HeaderComponent.js":
+/*!****************************************************!*\
+  !*** ./resources/js/app/header/HeaderComponent.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+
+
+var Header = function Header() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "navbar navbar-expand-md navbar-light navbar-laravel"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "nav nav-pills nav-fill"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    exact: true,
+    activeClassName: "active",
+    className: "nav-link",
+    to: "/"
+  }, "Inventory")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    activeClassName: "active",
+    className: "nav-link",
+    to: "/buy"
+  }, "Buy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    activeClassName: "active",
+    className: "nav-link",
+    to: "/reports"
+  }, "Reports")))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/app/product/EditProductComponent.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/app/product/EditProductComponent.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./resources/js/config/api.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -66544,54 +69497,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/HeaderComponent.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/HeaderComponent.js ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-
-
-
-var Header = function Header() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "navbar navbar-expand-md navbar-light navbar-laravel"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "nav nav-pills nav-fill"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link active",
-    to: "/"
-  }, "Inventory")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/buy"
-  }, "Buy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    className: "nav-link",
-    to: "/reports"
-  }, "Reports")))));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Header);
-
-/***/ }),
-
-/***/ "./resources/js/components/NewProductComponent.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/NewProductComponent.js ***!
-  \********************************************************/
+/***/ "./resources/js/app/product/NewProductComponent.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/app/product/NewProductComponent.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66603,6 +69512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./resources/js/config/api.js");
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -66628,6 +69538,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66693,7 +69604,7 @@ function (_Component) {
                   supplier_email: this.state.supplier_email
                 };
                 _context.next = 5;
-                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('api/inventory/products', product).then(function (response) {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config_api__WEBPACK_IMPORTED_MODULE_3__["default"].PRODUCTS), product).then(function (response) {
                   // redirect to the homepage
                   history.push('/');
                 })["catch"](function (error) {
@@ -66900,10 +69811,10 @@ function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/ProductListComponent.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/components/ProductListComponent.js ***!
-  \*********************************************************/
+/***/ "./resources/js/app/product/ProductListComponent.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/app/product/ProductListComponent.js ***!
+  \**********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66914,6 +69825,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _config_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../config/api */ "./resources/js/config/api.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -66931,6 +69843,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -66959,7 +69872,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/inventory/products').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("".concat(_config_api__WEBPACK_IMPORTED_MODULE_3__["default"].PRODUCTS)).then(function (response) {
         if (response.data.response.length > 0) {
           _this2.setState({
             products: response.data.response
@@ -67017,6 +69930,64 @@ function (_Component) {
 
 /***/ }),
 
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
+  window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+  __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+} catch (e) {}
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+// import Echo from 'laravel-echo'
+// window.Pusher = require('pusher-js');
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
+
+/***/ }),
+
 /***/ "./resources/js/config/api.js":
 /*!************************************!*\
   !*** ./resources/js/config/api.js ***!
@@ -67029,7 +70000,9 @@ __webpack_require__.r(__webpack_exports__);
 console.log("development");
 var base_url =  true ? 'http://localhost/superfudsapp/public/api' : undefined;
 var API = {
-  PRODUCTS: "".concat(base_url, "/inventory/products")
+  PRODUCTS: "".concat(base_url, "/inventory/products"),
+  BUY: "".concat(base_url, "/cart/buy"),
+  CANCELINVOICE: "".concat(base_url, "/cart/cancel")
 };
 /* harmony default export */ __webpack_exports__["default"] = (API);
 

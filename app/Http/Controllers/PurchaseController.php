@@ -36,13 +36,14 @@ class PurchaseController extends Controller
         $products = $request->input('products');
         $errors = [];
         foreach ($products as $key => $product) {
-            $productQ = Product::find($product["id"])->get()->first();
+            $productQ = Product::where("id", $product["id"])->get()->first();
             if ($productQ->quantity <= 0) { 
                 $errors[] = $product;
             }else{
                 
                 $productQ->decrement("quantity", $product["quantity"]);
                 $productQ->save();
+
                 $purchaseDetail = new PurchaseDetail;
                 $purchaseDetail->purchase_id = $purchase->id;
                 $purchaseDetail->product_id = $product["id"];

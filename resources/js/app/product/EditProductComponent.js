@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
-import API from '../config/api'
+import API from '../../config/api'
 class NewProject extends Component {
   constructor(props) {
     super(props)

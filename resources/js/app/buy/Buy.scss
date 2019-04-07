@@ -1,0 +1,37 @@
+.custom-col-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: white;
+    padding: 1em .5em;
+    border: 1px solid #e9ecef;
+    margin: .1em;
+}
+.custom-col-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.custom-col-cart{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: white;
+    padding: 1em .5em;
+    border: 1px solid #e9ecef;
+    margin: .1em;
+}
+.Buy-checkout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    margin: .5em;
+    border-top: 1px solid #e9ecef;
+    p{
+        margin: 0;
+        font-size: 1.5em;
+    }
+}

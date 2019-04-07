@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { Component } from 'react'
+import API from '../../config/api'
 
 class NewProject extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class NewProject extends Component {
 
     }
 
-    await axios.post('api/inventory/products', product)
+    await axios.post(`${API.PRODUCTS}`, product)
       .then(response => {
         // redirect to the homepage
         history.push('/')
@@ -74,7 +75,7 @@ class NewProject extends Component {
   async handleNewForm(event) {
     event.preventDefault()
     await this.handleCreateNewProduct(event)
-    if (Object.keys(this.state.errors).length <= 2 && this.state.errors.supplier_email || this.state.errors.supplier_name )
+    if (Object.keys(this.state.errors).length <= 2 && this.state.errors.supplier_email || this.state.errors.supplier_name)
       this.setState({
         nextform: true,
         errors: ''

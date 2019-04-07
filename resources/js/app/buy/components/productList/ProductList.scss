@@ -1,0 +1,56 @@
+.ProductList{
+    width: 100%;
+    padding: .5em;
+    margin: .5em;
+    border: 1px solid #e9ecef;
+    min-height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    img{
+        max-height: 70px;
+        height: 100%;
+    }
+    &-name{
+        text-transform: capitalize;
+        color: #31c592;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1em;
+    }
+    &-price{
+        width: 100%;
+        margin: 0;
+        font-size: 1.1em;
+    }
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        border-left: 1px solid #ccc;
+        padding-left: 1em;
+    }
+    .badge{
+        font-size: 0.8em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .5em;
+    }
+    &-controls{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        width: 100%;
+        button{
+            padding: .5em 1em;
+            border-radius: 100%;
+            font-size: .8em;
+        }
+    }
+}

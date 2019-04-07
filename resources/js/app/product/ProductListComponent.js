@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import API from '../../config/api'
 
 class ProductList extends Component {
   constructor() {
@@ -12,7 +13,7 @@ class ProductList extends Component {
   }
 
   componentDidMount() {
-    axios.get('api/inventory/products').then(response => {
+    axios.get(`${API.PRODUCTS}`).then(response => {
       if (response.data.response.length > 0) {
         this.setState({
           products: response.data.response
