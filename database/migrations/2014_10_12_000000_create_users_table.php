@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('rol');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
