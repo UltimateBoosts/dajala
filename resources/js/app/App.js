@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Header from './HeaderComponent'
-import ProductList from './ProductListComponent'
-import NewProduct from './NewProductComponent'
-import EditProduct from './EditProductComponent'
+import Header from './header/HeaderComponent'
+import ProductList from './product/ProductListComponent'
+import NewProduct from './product/NewProductComponent'
+import EditProduct from './product/EditProductComponent'
+import BuyProduct from './buy/BuyComponent'
+import Checkout from './checkout/CheckoutComponent'
 
 const base = process.env.NODE_ENV == 'development' ? '/superfudsapp/public' : '/'
 class App extends Component {
@@ -17,6 +19,8 @@ class App extends Component {
                         <Route exact path='/' component={ProductList} />
                         <Route path='/create' component={NewProduct} />
                         <Route path='/product/edit/:id' component={EditProduct} />
+                        <Route path='/buy' component={BuyProduct} />
+                        <Route path='/checkout' component={Checkout} />
 
                     </Switch>
                 </div>

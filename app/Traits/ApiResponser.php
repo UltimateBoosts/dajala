@@ -64,7 +64,7 @@ trait ApiResponser
 
     if($code === Response::HTTP_INTERNAL_SERVER_ERROR){
       return response()->json([
-        'error'       => ['internal_error' => [__('exception.interal_error')]], 
+        'error'       => ['internal_error' => [__('exception.internal_error')]], 
         'description' => $exception->getMessage(), 
         'line'        => $exception->getLine(), 
         'code'        => $code
@@ -80,7 +80,7 @@ trait ApiResponser
     }
     
     return response()->json([
-        'error'       => ['internal_error' => [__('exception.interal_error')]], 
+        'error'       => ['internal_error' => [__('exception.internal_error')]], 
         'description' => $exception, 
         'code'        => $code
       ], $code);

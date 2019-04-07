@@ -1,0 +1,12 @@
+.invoice{
+    padding: 1em;
+    &-detail{
+        font-size: 2em;
+        color: #31c593;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+.table{
+    text-align: right;
+}
