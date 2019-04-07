@@ -6,12 +6,11 @@ import ProductList from './ProductListComponent'
 import NewProduct from './NewProductComponent'
 import EditProduct from './EditProductComponent'
 
-
+const base = process.env.NODE_ENV == 'development' ? '/superfudsapp/public' : '/'
 class App extends Component {
     render() {
         return (
-            
-            <BrowserRouter basename='/superfudsapp/public'>
+            <BrowserRouter basename={base}>
                 <div>
                     <Header />
                     <Switch>
