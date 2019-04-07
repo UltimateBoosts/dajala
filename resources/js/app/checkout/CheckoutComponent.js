@@ -109,7 +109,7 @@ class CheckoutComponent extends Component {
                       <tbody>
                         {
                           productsBuy.map(elem => (
-                            <tr>
+                            <tr key={elem.id}>
                               <td>{elem.name}</td>
                               <td>{elem.quantity}</td>
                               <td>${elem.total}</td>

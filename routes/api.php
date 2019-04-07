@@ -17,7 +17,7 @@ Route::group(['prefix' => 'inventory'], function () {
 });
 Route::group(['prefix' => 'cart'], function () {
     Route::post('buy', 'PurchaseController@buy');
-    Route::delete('cancel/{invoice}', 'PurchaseController@cancelPurchase');
+    Route::delete('cancel/{invoice}', 'PurchaseController@cancel');
 });
 Route::group(['prefix' => 'reports'], function () {
     Route::get('sells', 'ReportController@sells');

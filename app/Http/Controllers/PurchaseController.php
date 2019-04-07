@@ -37,10 +37,10 @@ class PurchaseController extends Controller
         $errors = [];
         foreach ($products as $key => $product) {
             $productQ = Product::where("id", $product["id"])->get()->first();
-            if ($productQ->quantity <= 0) { 
+            if ($productQ->quantity <= 0) {
                 $errors[] = $product;
-            }else{
-                
+            } else {
+
                 $productQ->decrement("quantity", $product["quantity"]);
                 $productQ->save();
 
@@ -52,44 +52,26 @@ class PurchaseController extends Controller
                 $purchaseDetail->total = $product["total"];
                 $purchaseDetail->save();
             }
-
         }
         $purchase->purchaseDetail;
 
         return $this->showOne($purchase);
     }
-    public function cancel(Request $request, $invoice)
+    public function cancel($invoice)
     {
-        $this->validate($request, [
-            'name' => 'required|string',
-            'supplier_email' => 'required|email',
-            'supplier_name' => 'required|string',
-            'price' => 'required|numeric',
-            'quantity' => 'required|numeric',
-            'lot' => 'required|string',
-            'expired_at' => 'required|date'
-        ]);
-        $product = Product::where("name", $request->input('name'))->get()->first();
-        if (!$product) {
-            $user = User::where("email", $request->input('supplier_email'))->get()->first();
-            if (!$user) {
-                $user = new User;
-                $user->email = $request->input('supplier_email');
-                $user->name = $request->input('supplier_name');
-                $user->rol = 2;
-                $user->save();
+        $purchase = Purchase::where("invoice", $invoice)->get()->first();
+        if ($purchase) {
+            $purchase->status = "Canceled";
+            foreach ($purchase->purchaseDetail as $key => $detail) {
+                # code...
+                $productQ = Product::where("id", $detail->product_id)->get()->first();
+                $productQ->increment("quantity", $detail->quantity);
+                $productQ->save();
             }
-            $product = new Product;
-            $product->name = $request->input('name');
-            $product->supplier_id = $user->first()->id;
-            $product->price = $request->input('price');
-            $product->quantity = $request->input('quantity');
-            $product->lot = $request->input('lot');
-            $product->expired_at = $request->input('expired_at');
-            $product->save();
-            return $this->showOne($product);
+            $purchase->delete();
+            return $this->showMessage("Purchase canceled sucessfully");
         } else {
-            return $this->showMessage("El producto ya existe");
+            return $this->errorResponse("Puchase doesn't exist", 404);
         }
     }
 }

@@ -14,8 +14,19 @@ class Buy extends Component {
       products: [],
       productsBuy: [],
       headers: [],
-      total: 0
+      total: 0,
+      invoice: '',
+      errors: [],
+      invoiceOpen: false,
+      errorInvoice: '',
+      sucessInvoice: ''
     }
+    this.handleFieldChange = this.handleFieldChange.bind(this)
+    this.handleInvoice = this.handleInvoice.bind(this)
+    this.hasErrorFor = this.hasErrorFor.bind(this)
+    this.renderErrorFor = this.renderErrorFor.bind(this)
+    this.cancelPurchase = this.cancelPurchase.bind(this)
+
   }
 
   componentDidMount() {
@@ -84,11 +95,89 @@ class Buy extends Component {
       total: total
     })
   }
+  hasErrorFor(field) {
+    return !!this.state.errors[field]
+  }
+
+  renderErrorFor(field) {
+    if (this.hasErrorFor(field)) {
+      return (
+        <span className='invalid-feedback'>
+          <strong>{this.state.errors[field][0]}</strong>
+        </span>
+      )
+    }
+  }
+
+  handleFieldChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  async handleInvoice(event) {
+    event.preventDefault()
+    const invoice = this.state.invoice
+    await axios.delete(`${API.CANCELINVOICE}/${invoice}`)
+      .then(response => {
+        // redirect to the homepage
+        //history.push('/')
+        this.setState({
+          sucessInvoice: response.data.response
+        })
+      })
+      .catch(error => {
+        this.setState({
+          errorInvoice: error.response.data.description
+        })
+      })
+  }
+  cancelPurchase() {
+    this.setState({
+      invoiceOpen: !this.state.invoiceOpen,
+      errorInvoice: '',
+      sucessInvoice: ''
+    })
+  }
   render() {
-    const { products, productsBuy, total } = this.state
+    const { products, productsBuy, total, invoiceOpen, errorInvoice, sucessInvoice } = this.state
     return (
       <div className='container py-4'>
-        <div className="row no-gutters">
+        <button className='btn btn-danger btn-sm mb-3' onClick={this.cancelPurchase} >Cancel Purchase</button>
+        {invoiceOpen &&
+          <div className="invoice-form">
+            <form onSubmit={this.handleInvoice}>
+              <div className="form-group">
+                <label htmlFor='name'>Invoice code</label>
+                <input
+                  id='invoice'
+                  type='text'
+                  className={`form-control ${this.hasErrorFor('invoice') ? 'is-invalid' : ''}`}
+                  name='invoice'
+                  value={this.state.invoice}
+                  onChange={this.handleFieldChange}
+                  required
+                />
+
+              </div>
+              <div className="container-space-between">
+                <button className='btn btn-primary' >Send</button>
+                <button className='btn btn-danger' onClick={this.cancelPurchase}>Cancel</button>
+              </div>
+              {errorInvoice != '' &&
+                <div className="alert alert-danger" role="alert">
+                  {errorInvoice}
+                </div>
+              }
+              {sucessInvoice != '' &&
+                <div className="alert alert-success" role="success">
+                  {sucessInvoice}
+                </div>
+              }
+            </form>
+          </div>
+        }
+        <div className="row no-gutters space-between">
           <div className="custom-col-products col-12 col-sm-6 col-md-8">
             <h1>Products</h1>
             <Scrollbars style={{ height: 600 }}>

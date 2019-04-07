@@ -14,4 +14,5 @@ return [
     */
 
     'notfound' => 'Cant find the element you request',
+    'internal_error' => 'Internal error',
 ];

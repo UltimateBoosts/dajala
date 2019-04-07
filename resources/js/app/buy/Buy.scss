@@ -35,3 +35,17 @@
         font-size: 1.5em;
     }
 }
+.space-between{
+    justify-content: space-between;
+}
+.invoice-form{
+    max-width: 300px;
+    width: 100%;
+    background: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #e9ecef;
+    .alert{
+        margin-top: 1em;
+    }
+}
