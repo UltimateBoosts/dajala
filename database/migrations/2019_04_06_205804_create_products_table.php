@@ -20,8 +20,9 @@ class CreateProductsTable extends Migration
             $table->float('price', 8, 2);
             $table->integer('quantity');
             $table->string('lot');
-            $table->dateTime('expired_at');
+            $table->date('expired_at');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

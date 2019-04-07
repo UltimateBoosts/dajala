@@ -20,6 +20,7 @@ class CreatePurchasesTable extends Migration
             $table->string('status');
             $table->float('total', 8, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

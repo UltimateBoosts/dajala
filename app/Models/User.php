@@ -16,9 +16,8 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'id','name', 'email', 'rol'
     ];
-
     /**
      * The attributes that should be hidden for arrays.
      *
