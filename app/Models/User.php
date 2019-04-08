@@ -34,10 +34,10 @@ class User extends Model
      */
     public function purchases()
     {
-        return $this->hasMany(Purchace::class);
+        return $this->hasMany(Purchase::class);
     }
     public function products()
     {
-        return $this->hasMany(Products::class, 'supplier_id');
+        return $this->hasMany(Product::class, 'supplier_id');
     }
 }

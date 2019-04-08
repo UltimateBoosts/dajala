@@ -16,7 +16,7 @@ class Product extends Model
   ];
   public function purchaseDetail()
   {
-    return $this->hasMany(PurchaceDetail::class);
+    return $this->hasMany(PurchaseDetail::class);
   }
   public function supplier()
   {
