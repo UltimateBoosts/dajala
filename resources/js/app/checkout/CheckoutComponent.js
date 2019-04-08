@@ -49,9 +49,6 @@ class CheckoutComponent extends Component {
     }
     await axios.post(`${API.BUY}`, purchase)
       .then(response => {
-        // redirect to the homepage
-        //history.push('/')
-        console.log(response.data.response)
         this.setState({
           invoice: response.data.response.invoice,
           totalPurchase: response.data.response.total,

@@ -7,6 +7,7 @@ import NewProduct from './product/NewProductComponent'
 import EditProduct from './product/EditProductComponent'
 import BuyProduct from './buy/BuyComponent'
 import Checkout from './checkout/CheckoutComponent'
+import Reports from './reports/reportComponent'
 
 const base = process.env.NODE_ENV == 'development' ? '/superfudsapp/public' : '/'
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
                         <Route path='/product/edit/:id' component={EditProduct} />
                         <Route path='/buy' component={BuyProduct} />
                         <Route path='/checkout' component={Checkout} />
+                        <Route path='/reports' component={Reports} />
 
                     </Switch>
                 </div>
