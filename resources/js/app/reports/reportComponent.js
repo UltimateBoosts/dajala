@@ -34,7 +34,7 @@ class Reports extends Component {
 					animationEnabled: true,
 					theme: "light2", // "light1", "light2", "dark1", "dark2"
 					title: {
-						text: "Grafic by " + name
+						text: "Report by " + name
 					},
 					axisY: {
 						title: "Sales",
