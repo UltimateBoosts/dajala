@@ -22,14 +22,16 @@ class ReportController extends Controller
             );
             $total = 0;
             foreach ($product->purchaseDetail as $key => $purchaseDetail) {
-                # code...
-                $total += $purchaseDetail->total;
+                if ($purchaseDetail->purchase->deleted_at == null) {
+                    $total += $purchaseDetail->total;
+                }
             }
+
             $newProduct["y"] = $total;
             $reportProduct[] = $newProduct;
         }
         $reportClient = collect();
-        $reportSupplier= collect();
+        $reportSupplier = collect();
 
         foreach ($users as $key => $user) {
             if ($user->purchases->count() > 0) {
@@ -39,31 +41,28 @@ class ReportController extends Controller
                 );
                 $total = 0;
                 foreach ($user->purchases as $key => $purchase) {
-                    # code...
                     $total += $purchase->total;
                 }
                 $newClient["y"] = $total;
                 $reportClient[] = $newClient;
             }
 
-            if($user->products->count() > 0){
+            if ($user->products->count() > 0) {
                 $newSupplier = array(
                     "label" => $user->email
                 );
                 $total = 0;
                 foreach ($user->products as $key => $product) {
-                    # code...
-                    if($product->purchaseDetail->count() > 0){
+                    if ($product->purchaseDetail->count() > 0) {
                         foreach ($product->purchaseDetail as $item => $purchaseDetail) {
-                            # code...
-                            $total += $purchaseDetail->total;
+                            if ($purchaseDetail->purchase->deleted_at == null) {
+                                $total += $purchaseDetail->total;
+                            }
                         }
                     }
-
                 }
                 $newSupplier["y"] = $total;
                 $reportSupplier[] = $newSupplier;
-
             }
         }
         $reports = [];
