@@ -22,7 +22,7 @@ class ReportController extends Controller
             );
             $total = 0;
             foreach ($product->purchaseDetail as $key => $purchaseDetail) {
-                if ($purchaseDetail->purchase->deleted_at == null) {
+                if (!$purchaseDetail->purchase) {
                     $total += $purchaseDetail->total;
                 }
             }
@@ -55,7 +55,7 @@ class ReportController extends Controller
                 foreach ($user->products as $key => $product) {
                     if ($product->purchaseDetail->count() > 0) {
                         foreach ($product->purchaseDetail as $item => $purchaseDetail) {
-                            if ($purchaseDetail->purchase->deleted_at == null) {
+                            if (!$purchaseDetail->purchase) {
                                 $total += $purchaseDetail->total;
                             }
                         }
