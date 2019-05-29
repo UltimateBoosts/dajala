@@ -19,12 +19,15 @@ body, html {
   position: relative;
   img {
     position: absolute;
+    z-index: -1;
   }
-  .container {
+  .content {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(2, 35, 26, 0.74);
+    padding: 1em;
     .card {
       padding: 1em;
       max-width: 400px;
@@ -33,6 +36,14 @@ body, html {
       display: flex;
       align-items: center;
       justify-content: center;
+      background: none;
+      color: white;
+      border-color: inherit;
+      @media screen and (max-width:768px) {
+        font-size: 12px;
+        max-width: 330px;
+        min-height: 330px;
+      }
       h1{
         font-family: 'Ranga';
         font-size: 10em;

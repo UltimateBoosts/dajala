@@ -10669,16 +10669,19 @@ html {
 
 .construccion img {
   position: absolute;
+  z-index: -1;
 }
 
-.construccion .container {
+.construccion .content {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgba(2, 35, 26, 0.74);
+  padding: 1em;
 }
 
-.construccion .container .card {
+.construccion .content .card {
   padding: 1em;
   max-width: 400px;
   width: 100%;
@@ -10686,20 +10689,31 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  color: white;
+  border-color: inherit;
 }
 
-.construccion .container .card h1 {
+@media screen and (max-width: 768px) {
+  .construccion .content .card {
+    font-size: 12px;
+    max-width: 330px;
+    min-height: 330px;
+  }
+}
+
+.construccion .content .card h1 {
   font-family: "Ranga";
   font-size: 10em;
   margin-bottom: 0;
   line-height: 0.9;
 }
 
-.construccion .container .card h2 {
+.construccion .content .card h2 {
   font-family: "Ranga";
 }
 
-.construccion .container .card h3 {
+.construccion .content .card h3 {
   margin-top: 2em;
 }
 

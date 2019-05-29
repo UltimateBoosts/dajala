@@ -12,7 +12,7 @@
 <body>
     <section class="construccion">
         <img src="{{asset('images/fondo.jpg')}}" alt="">
-        <div class="container">
+        <div class="content">
             <div class="card">
                 <h1>Dajala</h1>
                 <h2>Cerros y Cordilleras</h2>
