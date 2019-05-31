@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Dajala</a></li>
                     <li><a href="#">Servicios</a></li>
                     <li><a href="#">Blog</a> </li>
                     <li><a href="#">Contacto</a></li>
@@ -31,9 +31,9 @@
             <img src="{{asset('images/fondo2.jpg')}}" alt="">
             <div class="slide-item-content">
                 <div class="slide-item-content-text">
-                    <h1><small>Nuesto objetivo #1</small> El medio ambiente </h1>
+                    <h1><small>Nuestro objetivo #1</small> El medio ambiente </h1>
                     <p class="big">
-                        Encuentra con nosotros una oportunidad unica para ayudar al planeta
+                    Encuentra con nosotros una oportunidad única para ayudar al planeta
                     </p>
                 </div>
             </div>
