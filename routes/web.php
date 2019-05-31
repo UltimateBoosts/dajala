@@ -13,3 +13,5 @@
 
 // Route::view('/{path?}', 'app')->where('path', '.*');
 Route::view('/', 'welcome');
+Route::view('/landing', 'landing');
+

@@ -1,63 +1,71 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Ranga&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat|Ranga&display=swap');
 // Variables
 @import 'variables';
+@import '~bootstrap/scss/bootstrap';
+@import './header.scss';
+@import './landing.scss';
 
 // Bootstrap
 $primary: #31c593;
-@import '~bootstrap/scss/bootstrap';
 
-body, html {
-  height: 100%;
-  width: 100%;
-}
-.construccion{
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  img {
-    position: absolute;
-    z-index: -1;
-  }
-  .content {
+body,
+html {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(2, 35, 26, 0.74);
-    padding: 1em;
-    .card {
-      padding: 1em;
-      max-width: 400px;
-      width: 100%;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      color: white;
-      border-color: inherit;
-      @media screen and (max-width:768px) {
-        font-size: 12px;
-        max-width: 330px;
-        min-height: 330px;
-      }
-      h1{
-        font-family: 'Ranga';
-        font-size: 10em;
-        margin-bottom: 0;
-        line-height: 0.9;
-      }
-      h2 {
-        font-family: 'Ranga';
-      }
-      h3 {
-        margin-top: 2em;
-      }
-    }
-  }
+    width: 100%;
+    font-family: 'Montserrat';
 }
 
+.construccion {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 
+    img {
+        position: absolute;
+        z-index: -1;
+    }
+
+    .content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(2, 35, 26, 0.74);
+        padding: 1em;
+
+        .card {
+            padding: 1em;
+            max-width: 400px;
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            color: white;
+            border-color: inherit;
+
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+                max-width: 330px;
+                min-height: 330px;
+            }
+
+            h1 {
+                font-family: 'Ranga';
+                font-size: 10em;
+                margin-bottom: 0;
+                line-height: 0.9;
+            }
+
+            h2 {
+                font-family: 'Ranga';
+            }
+
+            h3 {
+                margin-top: 2em;
+            }
+        }
+    }
+}
