@@ -1,12 +1,20 @@
+$primary: #31c593;
+$primary-rgb: rgba(49, 197, 147, 0.5);
+$transparent: rgba(255, 255, 255, .2);
+$blackcolor:rgb(97, 97, 97);
+
 .slide {
     height: 100%;
     overflow: hidden;
     position: relative;
     background: rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat';
+    z-index: 1;
 
     img {
         position: absolute;
         z-index: -1;
+        bottom: 0;
     }
 
     &-item {
@@ -28,9 +36,7 @@
             border-color: inherit;
 
             @media screen and (max-width: 768px) {
-                font-size: 12px;
-                max-width: 330px;
-                min-height: 330px;
+                font-size: .8em;
             }
 
             &-text {
@@ -40,14 +46,14 @@
                 text-align: center;
 
                 h1 {
-                    font-size: 58px;
-                    margin-bottom: 30px;
+                    font-size: 4em;
+                    margin-bottom: .5em;
                     letter-spacing: .02em;
                     line-height: 1.2;
 
                     small {
                         display: block;
-                        font-size: 29px;
+                        font-size: .5em;
                         text-transform: uppercase;
                         line-height: 1.2;
                         letter-spacing: .06em;
@@ -55,10 +61,139 @@
                 }
 
                 .big {
-                    font-size: 30px;
-                    line-height: 50px;
+                    font-size: 2em;
+                    line-height: 1.5em;
                     max-width: 650px;
                 }
+            }
+        }
+    }
+}
+
+.section {
+    padding: 5em 1em;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+        font-size: .8em;
+    }
+
+    h2 {
+        line-height: 1.5;
+        font-size: 3.5em;
+        font-weight: bold;
+    }
+
+    .text {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 1.5em;
+        }
+    }
+
+}
+
+.about {
+    padding-bottom: 0 !important;
+    color: #353030;
+
+    img {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.services {
+    background: #f5f5f5;
+    box-shadow: 0px -16px 32px rgba(189, 189, 189, 0.37);
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 3em;
+
+        &-item {
+            max-width: 270px;
+            padding: 1em;
+
+            img {
+                width: 100px;
+                margin-bottom: 2em;
+            }
+
+            p {
+                font-size: 1.1em;
+                line-height: 1.4;
+                font-weight: 300;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+}
+
+.subscribe {
+    background: url('https://livedemo00.template-help.com/wt_58434_v3/images/image-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: 0px -16px 32px rgba(189, 189, 189, 0.37);
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding-top: 2em;
+    }
+}
+
+.social {
+    box-shadow: 0px -16px 32px rgba(189, 189, 189, 0.37);
+
+    img {
+        max-width: 250px;
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .text {
+        max-width: 650px;
+        margin: 0 auto;
+        text-align: center;
+
+        p {
+            font-size: 1.2em;
+            font-weight: normal;
+            color: rgb(97, 97, 97);
+        }
+    }
+
+    .list-inline {
+        font-size: 1.5em;
+        max-width: 200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2em;
+
+        a {
+            text-decoration: none;
+            color: #9E9E9E;
+            transition: all ease-in-out .3s;
+
+            &:hover {
+                color: $primary;
             }
         }
     }
