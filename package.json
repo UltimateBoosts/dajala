@@ -26,6 +26,8 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "flickity": "^2.2.0",
+        "flickity-fade": "^1.0.0",
         "react-custom-scrollbars": "^4.2.1",
         "react-router-dom": "^5.0.0"
     },

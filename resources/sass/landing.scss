@@ -7,22 +7,37 @@ $blackcolor:rgb(97, 97, 97);
     height: 100%;
     overflow: hidden;
     position: relative;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
     font-family: 'Montserrat';
     z-index: 1;
-
+    &-item.fix {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
     img {
         position: absolute;
         z-index: -1;
         bottom: 0;
+        left: 0;
+        @media screen and (min-width: 1900px) {
+            width: 100%;
+        }
     }
-
+    .slides {
+        height: 100%;
+        .slide-item {
+            width: 100%;
+            background: none !important;
+        }
+    }
     &-item {
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 1em;
+        background: rgba(0, 0, 0, 0.3);
 
         &-content {
             padding: 1em;
@@ -47,17 +62,24 @@ $blackcolor:rgb(97, 97, 97);
 
                 h1 {
                     font-size: 4em;
-                    margin-bottom: .5em;
+                    margin-bottom: 0;
                     letter-spacing: .02em;
                     line-height: 1.2;
 
                     small {
                         display: block;
-                        font-size: .5em;
+                        font-size: .6em;
                         text-transform: uppercase;
                         line-height: 1.2;
                         letter-spacing: .06em;
                     }
+                }
+
+                .cuotation {
+                    align-self: flex-end;
+                    font-size: 1.5em;
+                    letter-spacing: 2px;
+                    margin-right: 1.5em;
                 }
 
                 .big {
@@ -73,7 +95,11 @@ $blackcolor:rgb(97, 97, 97);
 .section {
     padding: 5em 1em;
     text-align: center;
-
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     @media screen and (max-width: 768px) {
         font-size: .8em;
     }
@@ -119,7 +145,6 @@ $blackcolor:rgb(97, 97, 97);
         justify-content: space-around;
         align-items: center;
         padding-top: 3em;
-
         &-item {
             max-width: 270px;
             padding: 1em;

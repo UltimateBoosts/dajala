@@ -13,5 +13,10 @@
 
 // Route::view('/{path?}', 'app')->where('path', '.*');
 Route::view('/', 'welcome');
-Route::view('/landing', 'landing');
+Route::view('/home', 'landing');
+Route::view('/dajala', 'about');
+Route::view('/servicios', 'services');
+Route::view('/contacto', 'contact');
+
+
 
