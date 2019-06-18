@@ -35,7 +35,7 @@
         </div>
     </section>
 
-
+    @include('footer') 
     <!-- <footer class="section social">
         <div class="container">
             <img src="{{asset('images/logo-negro.png')}}" alt="">

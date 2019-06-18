@@ -10,27 +10,12 @@
 </head>
 
 <body>
-    <header class="header black">
-        <div class="header-container">
-            <div class="logo">
-                <img src="{{asset('images/logo-negro.png')}}" alt="logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="{{url('landing')}}">Home</a></li>
-                    <li><a href="#">Dajala</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Blog</a> </li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="section about">
+    @include('header-black')
+    <section class="section">
         <div class="container">
             <h2>404</h2>
             <p>La pagina solicitada no fue encontrada</p>
-            <a class="btn button green" href="{{url('landing')}}">Volver</a>
+            <a class="btn button green" href="{{url('home')}}">Volver</a>
         </div>
         <div class="background"></div>
     </section>

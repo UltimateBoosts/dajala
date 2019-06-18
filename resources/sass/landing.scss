@@ -10,27 +10,33 @@ $blackcolor:rgb(97, 97, 97);
     background: rgba(0, 0, 0, 0.5);
     font-family: 'Montserrat';
     z-index: 1;
+
     &-item.fix {
         position: absolute;
         top: 0;
         width: 100%;
     }
+
     img {
         position: absolute;
         z-index: -1;
         bottom: 0;
         left: 0;
+
         @media screen and (min-width: 1900px) {
             width: 100%;
         }
     }
+
     .slides {
         height: 100%;
+
         .slide-item {
             width: 100%;
             background: none !important;
         }
     }
+
     &-item {
         height: 100%;
         display: flex;
@@ -100,6 +106,7 @@ $blackcolor:rgb(97, 97, 97);
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
     @media screen and (max-width: 768px) {
         font-size: .8em;
     }
@@ -145,6 +152,7 @@ $blackcolor:rgb(97, 97, 97);
         justify-content: space-around;
         align-items: center;
         padding-top: 3em;
+
         &-item {
             max-width: 270px;
             padding: 1em;
@@ -183,40 +191,34 @@ $blackcolor:rgb(97, 97, 97);
     }
 }
 
-.social {
-    box-shadow: 0px -16px 32px rgba(189, 189, 189, 0.37);
-
-    img {
-        max-width: 250px;
-        width: 100%;
-        margin-bottom: 2em;
-    }
-
-    .text {
-        max-width: 650px;
-        margin: 0 auto;
-        text-align: center;
-
-        p {
-            font-size: 1.2em;
-            font-weight: normal;
-            color: rgb(97, 97, 97);
-        }
-    }
-
+footer.social {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "Montserrat";
     .list-inline {
         font-size: 1.5em;
-        max-width: 200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-around;
-        margin-top: 2em;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        @media screen and (max-width: 768px) {
+            font-size: 0.9em;
+            justify-content: center;
+        }
 
+        span {
+            font-size: 1.1em;
+            margin-right: .5em;
+        }
         a {
+            font-size: 0.9em;
+            margin: 1em;
             text-decoration: none;
-            color: #9E9E9E;
+            color: white;
             transition: all ease-in-out .3s;
-
             &:hover {
                 color: $primary;
             }
