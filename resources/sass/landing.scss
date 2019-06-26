@@ -55,7 +55,7 @@ $blackcolor:rgb(97, 97, 97);
             background: none;
             color: white;
             border-color: inherit;
-
+            background: rgba(38, 50, 56, 0.7);
             @media screen and (max-width: 768px) {
                 font-size: .8em;
             }
@@ -202,7 +202,7 @@ footer.social {
         font-size: 1.5em;
         margin: 0 auto;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         flex-wrap: wrap;
         @media screen and (max-width: 768px) {
             font-size: 0.9em;

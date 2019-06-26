@@ -27,8 +27,8 @@
             <div class="slide-item-content">
                 <div class="slide-item-content-text">
                     <h1> <small>“LA TIERRA NO LA HEMOS HEREDADO DE LOS PADRES, LA HEMOS TOMADO EN
-                            PRÉSTAMO A NUESTROS HIJOS”</small> </h1>
-                    <p class="cuotation">- UNESCO</p>
+                            PRÉSTAMO DE NUESTROS HIJOS”</small> </h1>
+                    <p class="cuotation">UNESCO</p>
 
                 </div>
             </div>

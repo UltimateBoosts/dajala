@@ -1,7 +1,13 @@
+.about.section {
+    padding: 0;
+    padding-top: 7em;
+}
 .about {
     height: auto;
     position: relative;
+    z-index: 1;
     min-height: 100vh;
+    color: white;
 
     .mision {
         .item {
@@ -19,11 +25,17 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin-bottom: 10em;
-        margin-top: 3em;
-
+        margin-top: 4em;
+        width: 100%;
+        flex-direction: column;
+        background: white;
+        position: relative;
+        z-index: 1;
         .title {
             font-size: 2.5em;
+            background: white;
+            color: black;
+            padding: 1em 3em;
         }
 
         .item {
@@ -35,26 +47,20 @@
                 text-align: left;
             }
         }
-    }
-
-    .container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-top: 4em;
 
         .slidesx {
             width: 100%;
-
+            padding-bottom: 6em;
             .card {
                 margin: .5em;
+                color: #353030;
 
                 &-text {
                     text-align: left;
                 }
 
                 &-body {
-                    min-height: 310px;
+                    min-height: 220px;
                     display: flex;
                     flex-direction: column;
                 }
@@ -64,6 +70,15 @@
                 }
             }
         }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 4em;
+
+
 
         .item {
             font-size: 0.7em;
@@ -83,5 +98,19 @@
         position: absolute;
         bottom: 0;
         z-index: -1;
+    }
+
+    .back {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
+
+        img {
+            max-width: inherit;
+            width: auto;
+        }
     }
 }
