@@ -17,7 +17,7 @@
     <section class="slide">
         <div class="slides">
             <div class="slide-item">
-                <img src="{{asset('images/fondo4.jpg')}}" alt="">
+                <img src="{{asset('images/fondo5.jpg')}}" alt="">
             </div>
             <div class="slide-item">
                 <img src="{{asset('images/fondo3.jpg')}}" alt="">

@@ -2,7 +2,7 @@
     <div class="footer-container">
         <div class="social-list">
             <ul class="list-inline">
-                <a href="#">
+                <a target="_blanc" href="https://www.facebook.com/Dajala-Cerros-y-Cordilleras-340595536860183">
                     <li class="list-inline-item"><span class="fab fa-facebook-f"></span>DajalaCerrosyCordilleras</li>
                 </a>
                 <a href="#">

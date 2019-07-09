@@ -11,34 +11,18 @@
 
 <body>
     @include('header-black') 
-    <section class="section services">
+    <section class="services">
         <div class="container">
             <h2>Nuestros Servicios</h2>
             <div class="services-items">
-                <div class="services-items-item">
-                    <img src="{{asset('images/svg/plant-1.svg')}}" alt="">
-                    <h3>Titulo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis saepe quia rem dolores ipsum facilis distinctio voluptate doloremque dolor nostrum?</p>
+            @foreach($data as $service)
+            <div class="services-items-item">
+                <div class="services-items-item-back">
+                    <img src="{{asset('images/services/'.$service['image'])}}" alt="">
                 </div>
-                <div class="services-items-item">
-                    <img src="{{asset('images/svg/leaf.svg')}}" alt="">
-                    <h3>Titulo</h3>
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis saepe quia rem dolores ipsum facilis distinctio voluptate doloremque dolor nostrum?</p>
+                    <h3>{{$service["titulo"]}}</h3>
                 </div>
-                <div class="services-items-item">
-                    <img src="{{asset('images/svg/plant.svg')}}" alt="">
-                    <h3>Titulo</h3>
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis saepe quia rem dolores ipsum facilis distinctio voluptate doloremque dolor nostrum?</p>
-                </div>
-                <div class="services-items-item">
-
-                    <img src="{{asset('images/svg/tree.svg')}}" alt="">
-                    <h3>Titulo</h3>
-
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis saepe quia rem dolores ipsum facilis distinctio voluptate doloremque dolor nostrum?</p>
-                </div>
+            @endforeach
             </div>
         </div>
     </section>
