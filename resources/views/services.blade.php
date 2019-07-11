@@ -10,19 +10,21 @@
 </head>
 
 <body>
-    @include('header-black') 
     <section class="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="services-items">
-            @foreach($data as $service)
-            <div class="services-items-item">
-                <div class="services-items-item-back">
-                    <img src="{{asset('images/services/'.$service['image'])}}" alt="">
+        <div class="main">
+            @include('header-white') 
+            <div class="container">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-items">
+                @foreach($data as $service)
+                <div class="services-items-item">
+                    <div class="services-items-item-back">
+                        <img src="{{asset('images/services/'.$service['image'])}}" alt="">
+                    </div>
+                        <h3>{{$service["titulo"]}}</h3>
+                    </div>
+                @endforeach
                 </div>
-                    <h3>{{$service["titulo"]}}</h3>
-                </div>
-            @endforeach
             </div>
         </div>
     </section>
