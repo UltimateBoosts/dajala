@@ -21,25 +21,35 @@ $servicios[] = array("titulo" => "PLANEACIÓN Y ORDENAMIENTO TERRITORIAL", "imag
 $servicios[] = array("titulo" => "ASESORÍAS, CONSULTORÍAS Y APOYOS A ONG’S Y EMPRESAS SIN ÁNIMO DE LUCRO, ECONOMÍA SOLIDARIA DEL SECTOR AMBIENTAL", "image" => "servicio_6.jpg");
 $servicios[] = array("titulo" => "DESARROLLO Y EJECUCIÓN PLANES, PROGRAMAS, PROYECTOS Y ACTIVIDADES AMBIENTALES PARA EL POSTCONFLICTO Y BÚSQUEDA Y CONSOLIDACIÓN DE LA PAZ", "image" => "servicio_7.jpg");
 $servicios[] = array("titulo" => "PROTECCIÓN SOCIAL INTEGRAL DE LAS PERSONAS AFECTADAS POR LA TOMA DE DECISIONES EN MATERIA DE CUMPLIMIENTO DE DECISIONES JUDICIALES O DE POLÍTICAS AMBIENTALES", "image" => "servicio_8.jpg");
-$servicios[] = array("titulo" => "PROYECTOS DE DESARROLLO CON ENFOQUE AMBIENTAL", "image" => "servicio_1.jpg");
-$servicios[] = array("titulo" => "SEGURIDAD ALIMENTARIA, COMPLEMENTARIEDAD Y AUTOABASTECIMIENTO BAJO CRITERIOS ORGÁNICOS", "image" => "servicio_1.jpg");
-$servicios[] = array("titulo" => "EJECUCIÓN DE PLANES Y PROYECTOS EN TEMAS SANITARIOS BAJO CRITERIOS DE CONSERVACIÓN Y PRESERVACIÓN AMBIENTAL", "image" => "servicio_1.jpg");
-$servicios[] = array("titulo" => "FORMULACIÓN, DESARROLLO Y EJECUCIÓN DE PLANES, PROGRAMAS Y PROYECTOS DE ECOTURISMO Y ASUNTOS AMBIENTALES", "image" => "servicio_1.jpg");
+$servicios[] = array("titulo" => "PROYECTOS DE DESARROLLO CON ENFOQUE AMBIENTAL", "image" => "servicio_9.jpg");
+$servicios[] = array("titulo" => "SEGURIDAD ALIMENTARIA, COMPLEMENTARIEDAD Y AUTOABASTECIMIENTO BAJO CRITERIOS ORGÁNICOS", "image" => "servicio_10.jpg");
+$servicios[] = array("titulo" => "EJECUCIÓN DE PLANES Y PROYECTOS EN TEMAS SANITARIOS BAJO CRITERIOS DE CONSERVACIÓN Y PRESERVACIÓN AMBIENTAL", "image" => "servicio_11.jpg");
+$servicios[] = array("titulo" => "FORMULACIÓN, DESARROLLO Y EJECUCIÓN DE PLANES, PROGRAMAS Y PROYECTOS DE ECOTURISMO Y ASUNTOS AMBIENTALES", "image" => "servicio_12.jpg");
 $servicios[] = array("titulo" => "REFORESTACIÓN CON ESPECIES NATIVAS", "image" => "servicio_13.jpg");
 $servicios[] = array("titulo" => "REPOBLAMIENTO DE REFORESTACIÓN", "image" => "servicio_14.jpg");
-$servicios[] = array("titulo" => "DEFENSA, PROTECCIÓN Y PROMOCIÓN Y ACTUALIZACIÓN DE DERECHOS AMBIENTALES Y CONEXOS", "image" => "servicio_1.jpg");
-$servicios[] = array("titulo" => "FONDO EDITORIAL AMBIENTAL Y ECOLÓGICO", "image" => "servicio_1.jpg");
+$servicios[] = array("titulo" => "DEFENSA, PROTECCIÓN Y PROMOCIÓN Y ACTUALIZACIÓN DE DERECHOS AMBIENTALES Y CONEXOS", "image" => "servicio_15.jpg");
+$servicios[] = array("titulo" => "FONDO EDITORIAL AMBIENTAL Y ECOLÓGICO", "image" => "servicio_16.jpg");
 $servicios[] = array("titulo" => "CULTURA MARÍTIMA Y OCEÁNICA", "image" => "servicio_17.jpg");
-$servicios[] = array("titulo" => "RECUPERACIÓN Y MANEJO DE LA ESTRUCTURA ECOLÓGICA PRINCIPAL", "image" => "servicio_1.jpg");
+$servicios[] = array("titulo" => "RECUPERACIÓN Y MANEJO DE LA ESTRUCTURA ECOLÓGICA PRINCIPAL", "image" => "servicio_18.jpg");
 $servicios[] = array("titulo" => "AMBIENTE SANO PARA LA EQUIDAD Y DISFRUTE DEL CIUDADANO", "image" => "servicio_19.jpg");
-$servicios[] = array("titulo" => "ADAPTACIÓN AL CAMBIO CLIMÁTICO", "image" => "servicio_1.jpg");
-$servicios[] = array("titulo" => "PLAN DE MANEJO FRANJA ADECUACIÓN A RESERVAS FORESTALES", "image" => "servicio_1.jpg");
+$servicios[] = array("titulo" => "ADAPTACIÓN AL CAMBIO CLIMÁTICO", "image" => "servicio_20.jpg");
+$servicios[] = array("titulo" => "PLAN DE MANEJO FRANJA ADECUACIÓN A RESERVAS FORESTALES", "image" => "servicio_21.jpg");
 
 Route::view('/', 'welcome');
 Route::view('/home', 'landing');
 Route::view('/quienes-somos', 'about');
 Route::view('/servicios', 'services', array("data" => $servicios ));
 Route::view('/contacto', 'contact');
+Route::view('/dashboard', 'login');
+Route::post('/login', 'AuthController@login');
+
+Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return redirect('admin/blog');
+    });
+    Route::get('logout', 'AuthController@logout');
+    Route::resource('blog', 'blogController');
+});
 
 
 

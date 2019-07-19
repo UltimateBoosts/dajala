@@ -62,7 +62,7 @@ class Handler extends ExceptionHandler
         } else if ($exception instanceof NotFoundHttpException) {
             return response()->view('errors.' . '404', [], 404);
         } else if ($exception instanceof MethodNotAllowedHttpException) {
-            return $this->errorResponse(__('exception.methodnotallowed'), Response::HTTP_METHOD_NOT_ALLOWED);
+            return response()->view('errors.' . '404', [], 404);
         } else if ($exception instanceof HttpException) {
             return $this->errorResponse($exception->getMessage(), $exception->getStatusCode());
         } else if ($exception instanceof SoapFault) {

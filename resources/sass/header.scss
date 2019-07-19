@@ -2,6 +2,10 @@
 $blackcolor:rgb(97, 97, 97);
 .header.black {
     color: $blackcolor;
+    right: 0;
+}
+.header.black.relative {
+    position: relative;
 }
 .header {
     position: absolute;

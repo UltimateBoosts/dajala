@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class User extends Authenticatable
 {
     use SoftDeletes;
 
@@ -32,12 +32,8 @@ class User extends Model
      *
      * @var array
      */
-    public function purchases()
+    public function getPass()
     {
-        return $this->hasMany(Purchase::class);
-    }
-    public function products()
-    {
-        return $this->hasMany(Product::class, 'supplier_id');
+        return $this->attributes['password'];
     }
 }
