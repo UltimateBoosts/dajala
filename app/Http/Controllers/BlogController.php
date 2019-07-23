@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use Illuminate\Http\Request;
-
+use Intervention\Image\ImageManagerStatic as Image;
+use Illuminate\Support\Facades\Storage;
 class BlogController extends Controller
 {
     /**
@@ -27,6 +28,7 @@ class BlogController extends Controller
     public function create()
     {
         //
+        return view('admin/blog/create');
     }
 
     /**
@@ -38,6 +40,29 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         //
+        $blog = new Blog();
+        $blog->title = $request->blog_title;
+        $blog->description = $request->blog_description;
+        $blog->slug = str_slug($blog->title, '-');
+        $blog->content = $request->blog_content;
+        $blog->image = 'default';
+        $blog->save();
+        if ($request->hasFile('blog_image')) {
+            $image      = $request->file('blog_image');
+            $fileName   = time() . '.'.$blog->slug.'.'. $image->getClientOriginalExtension();
+            $blog->image = $fileName;
+            $img = Image::make($image->getRealPath());
+            $img->stream(); 
+            Storage::disk('public')->put('blog/images/'.$blog->id.'/large'.'/'.$fileName, $img, 'public');
+            $img->resize(400, 400, function ($constraint) {
+                $constraint->aspectRatio();                 
+            });
+            $img->stream(); // <-- Key point
+            Storage::disk('public')->put('blog/images/'.$blog->id.'/smalls'.'/'.$fileName, $img, 'public');
+            $blog->update();
+        }
+        $blogs = Blog::all();
+        return redirect('admin/blog')->with('success', 'Creado satisfactoriamente');
     }
 
     /**
@@ -60,6 +85,8 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         //
+        $blog = Blog::find($blog)->first();
+        return view('admin/blog/edit')->with('blog', $blog);
     }
 
     /**
@@ -72,6 +99,28 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         //
+        $blog = Blog::find($blog)->first();
+        $blog->title = $request->blog_title;
+        $blog->description = $request->blog_description;
+        $blog->slug = str_slug($blog->title, '-');
+        $blog->content = $request->blog_content;
+        $blog->update();
+        if ($request->hasFile('blog_image')) {
+            $image      = $request->file('blog_image');
+            $fileName   = time() . '.'.$blog->slug.'.'. $image->getClientOriginalExtension();
+            $blog->image = $fileName;
+            $img = Image::make($image->getRealPath());
+            $img->stream(); 
+            Storage::disk('public')->put('blog/images/'.$blog->id.'/large'.'/'.$fileName, $img, 'public');
+            $img->resize(400, 400, function ($constraint) {
+                $constraint->aspectRatio();                 
+            });
+            $img->stream(); // <-- Key point
+            Storage::disk('public')->put('blog/images/'.$blog->id.'/smalls'.'/'.$fileName, $img, 'public');
+            $blog->update();
+        }
+        $blogs = Blog::all();
+        return redirect('admin/blog')->with('success', 'Guardado satisfactoriamente');
     }
 
     /**
@@ -82,6 +131,9 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        $blog = Blog::find($blog)->first();
+        Storage::deleteDirectory('public/blog/images/'.$blog->id);
+        $blog->delete();
+        return redirect('admin/blog')->with('success', 'Eliminado satisfactoriamente');
     }
 }

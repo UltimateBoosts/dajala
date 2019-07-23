@@ -168,4 +168,6 @@ if (document.querySelector('.slides')) {
         // at end of cells, wraps-around to first for infinite scrolling
 
     });
+
 }
+

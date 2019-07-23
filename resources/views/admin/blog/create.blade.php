@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('admin.blog.layout')
 
 @section('content')
 <style>
@@ -8,7 +8,7 @@
 </style>
 <div class="card uper">
   <div class="card-header">
-    Add Share
+    Nuevo articulo
   </div>
   <div class="card-body">
     @if ($errors->any())
@@ -20,21 +20,39 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('shares.store') }}">
+      <form method="post" action="{{ route('blog.store') }}" enctype="multipart/form-data">
           <div class="form-group">
               @csrf
-              <label for="name">Share Name:</label>
-              <input type="text" class="form-control" name="share_name"/>
+              <label for="name">Titulo del articulo</label>
+              <input type="text" class="form-control" name="blog_title" required/>
           </div>
           <div class="form-group">
-              <label for="price">Share Price :</label>
-              <input type="text" class="form-control" name="share_price"/>
+              <label for="quantity">Descripcion articulo</label>
+              <input type="text" class="form-control" name="blog_description" required/>
           </div>
           <div class="form-group">
-              <label for="quantity">Share Quantity:</label>
-              <input type="text" class="form-control" name="share_qty"/>
+              <label for="quantity">Contenido del articulo</label>
+              <textarea id="summernote" name="blog_content" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Add</button>
+          <div class="form-group">
+            <div class="input-group image-preview">
+                <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                <span class="input-group-btn">
+                    <!-- image-preview-clear button -->
+                    <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                    </button>
+                    <!-- image-preview-input -->
+                    <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="blog_image"/> <!-- rename it -->
+                    </div>
+                </span>
+            </div><!-- /input-group image-preview [TO HERE]--> 
+          </div>
+          <button type="submit" class="btn btn-primary">Crear Articulo</button>
+          <a href="{{URL::previous() }}">Volver</a>
       </form>
   </div>
 </div>

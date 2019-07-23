@@ -7,11 +7,12 @@
   }
 </style>
 <div class="uper">
-  @if(session()->get('success'))
+  @if(session()->has('success'))
     <div class="alert alert-success">
       {{ session()->get('success') }}  
     </div><br />
   @endif
+  <a href="{{ route('blog.create')}}" class="btn button greenb" >Crear Articulo</a>
   <table class="table table-striped">
     <thead>
         <tr>
@@ -26,9 +27,9 @@
         <tr>
             <td>{{$blog->title}}</td>
             <td>{{$blog->name}}</td>
-            <td><a href="{{ route('blogs.edit',$blog->id)}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="{{ route('blog.edit',$blog->id)}}" class="btn btn-primary">Edit</a></td>
             <td>
-                <form action="{{ route('blogs.destroy', $blog->id)}}" method="post">
+                <form action="{{ route('blog.destroy', $blog->id)}}" method="post">
                   @csrf
                   @method('DELETE')
                   <button class="btn btn-danger" type="submit">Delete</button>

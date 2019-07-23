@@ -5,7 +5,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="{{url('home')}}" class="{{ (request()->is('home')) ? 'active' : '' }}">Home</a></li>
+                <li><a href="{{url('admin/blog')}}" class="{{ (request()->is('admin/blog')) ? 'active' : '' }}">Administrador</a></li>
                 <li><a href="#" class="{{ (request()->is('quienes-somos')) ? 'active' : '' }}">Blog</a> </li>
                 <li><a href="{{action('AuthController@logout')}}">Cerrar Sesión</a></li>
             </ul>
