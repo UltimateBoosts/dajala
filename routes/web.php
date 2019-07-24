@@ -42,15 +42,15 @@ Route::view('/servicios', 'services', array("data" => $servicios ));
 Route::view('/contacto', 'contact');
 Route::view('/dashboard', 'login');
 Route::post('/login', 'AuthController@login');
-Route::get('/blog', 'blogController@indexBlogs');
-Route::get('/blog/{slug}', 'blogController@show');
+Route::get('/blog', 'BlogController@indexBlogs');
+Route::get('/blog/{slug}', 'BlogController@show');
 
 Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return redirect('admin/blog');
     });
     Route::get('logout', 'AuthController@logout');
-    Route::resource('blog', 'blogController');
+    Route::resource('blog', 'BlogController');
 });
 
 
