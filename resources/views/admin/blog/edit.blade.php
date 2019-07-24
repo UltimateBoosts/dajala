@@ -25,11 +25,11 @@
           <div class="form-group">
               @csrf
               <label for="name">Titulo del articulo </label>
-          <input type="text" class="form-control" value={{$blog->title}} name="blog_title" required/>
+          <input type="text" class="form-control" value="{{$blog->title}}" name="blog_title" required/>
           </div>
           <div class="form-group">
               <label for="quantity">Descripcion articulo</label>
-              <input type="text" class="form-control" value={{$blog->description}} name="blog_description" required/>
+              <input type="text" class="form-control" value="{{$blog->description}}" name="blog_description" required/>
           </div>
           <div class="form-group">
               <label for="quantity">Contenido del articulo</label>

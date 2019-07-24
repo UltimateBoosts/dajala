@@ -42,6 +42,8 @@ Route::view('/servicios', 'services', array("data" => $servicios ));
 Route::view('/contacto', 'contact');
 Route::view('/dashboard', 'login');
 Route::post('/login', 'AuthController@login');
+Route::get('/blog', 'blogController@indexBlogs');
+Route::get('/blog/{slug}', 'blogController@show');
 
 Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
     Route::get('/', function () {

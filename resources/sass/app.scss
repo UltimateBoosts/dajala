@@ -8,6 +8,7 @@
 @import './header.scss';
 @import './landing.scss';
 @import './about.scss';
+@import './blog.scss';
 
 // Bootstrap
 $primary: #31c593;
@@ -31,6 +32,9 @@ html {
     a {
         color: #31c593;
     }
+}
+.color-white {
+    color: white;
 }
 .construccion {
     height: 100%;

@@ -19,7 +19,12 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('admin/blog/index')->with(["blogs" => $blogs]);
     }
-
+    public function indexBlogs()
+    {
+        //
+        $blogs = Blog::all();
+        return view('blog')->with(["blogs" => $blogs]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -71,9 +76,14 @@ class BlogController extends Controller
      * @param  \App\Blog  $blog
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($slug)
     {
         //
+        $blog = Blog::where('slug', $slug)->get()->first();
+        if($blog){
+            return view('blogDetail')->with(["blog" => $blog]);
+        } 
+        return response()->view('errors.' . '404', [], 404);
     }
 
     /**
