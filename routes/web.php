@@ -35,17 +35,17 @@ $servicios[] = array("titulo" => "AMBIENTE SANO PARA LA EQUIDAD Y DISFRUTE DEL C
 $servicios[] = array("titulo" => "ADAPTACIÓN AL CAMBIO CLIMÁTICO", "image" => "servicio_20.jpg");
 $servicios[] = array("titulo" => "PLAN DE MANEJO FRANJA ADECUACIÓN A RESERVAS FORESTALES", "image" => "servicio_21.jpg");
 
-Route::view('/', 'welcome');
-Route::view('/home', 'landing');
-Route::view('/quienes-somos', 'about');
-Route::view('/servicios', 'services', array("data" => $servicios ));
-Route::view('/contacto', 'contact');
-Route::view('/dashboard', 'login');
-Route::post('/login', 'AuthController@login');
-Route::get('/blog', 'BlogController@indexBlogs');
-Route::get('/blog/{slug}', 'BlogController@show');
+Route::view('/', 'welcome')->middleware(['XSS']);
+Route::view('/home', 'landing')->middleware(['XSS']);
+Route::view('/quienes-somos', 'about')->middleware(['XSS']);
+Route::view('/servicios', 'services', array("data" => $servicios ))->middleware(['XSS']);
+Route::view('/contacto', 'contact')->middleware(['XSS']);
+Route::view('/dashboard', 'login')->middleware(['XSS']);
+Route::post('/login', 'AuthController@login')->middleware(['XSS']);
+Route::get('/blog', 'BlogController@indexBlogs')->middleware(['XSS']);
+Route::get('/blog/{slug}', 'BlogController@show')->middleware(['XSS']);
 
-Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
+Route::middleware(['isAdmin', 'XSS'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return redirect('admin/blog');
     });
