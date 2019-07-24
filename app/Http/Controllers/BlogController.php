@@ -95,7 +95,7 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         //
-        $blog = Blog::find($blog)->first();
+        $blog = Blog::find($blog->id)->first();
         return view('admin/blog/edit')->with('blog', $blog);
     }
 
@@ -109,7 +109,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
         //
-        $blog = Blog::find($blog)->first();
+        $blog = Blog::find($blog->id)->first();
         $blog->title = $request->blog_title;
         $blog->description = $request->blog_description;
         $blog->slug = str_slug($blog->title, '-');
@@ -141,7 +141,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        $blog = Blog::find($blog)->first();
+        $blog = Blog::find($blog->id)->first();
         Storage::deleteDirectory('public/blog/images/'.$blog->id);
         $blog->delete();
         return redirect('admin/blog')->with('success', 'Eliminado satisfactoriamente');
