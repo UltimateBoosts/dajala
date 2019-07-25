@@ -16,10 +16,17 @@
             <h2>Déjanos tu email</h2>
             <div class="text">
                 <p>Te contactaremos lo más pronto posible</p>
-                <form action="" method="GET">
-                    <input class="input transparent" type="email" placeholder="Tu correo electrónico" required>
+                <form action="{{action('ContactController@sendEmail')}}" method="POST">
+                    @csrf
+                    <input class="input transparent" type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <textarea id="" cols="20" rows="10" name="message" placeholder="Tu mensaje"></textarea>
                     <button class="btn button green" type="submit">Contáctame</button>
                 </form>
+                @if(session()->has('success'))
+                <div class="alert alert-success">
+                    {{ session()->get('success') }}  
+                </div><br />
+                @endif
             </div>
         </div>
     </section>

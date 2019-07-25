@@ -68,7 +68,7 @@ class Handler extends ExceptionHandler
         } else if ($exception instanceof SoapFault) {
             return $this->errorResponse($exception->faultstring, Response::HTTP_EXPECTATION_FAILED);
         } else {
-            return $this->errorResponse($exception, Response::HTTP_INTERNAL_SERVER_ERROR);
+            return response()->view('errors.' . '503', [], 404);
         }
     }
 }

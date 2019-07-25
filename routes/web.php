@@ -44,6 +44,7 @@ Route::view('/dashboard', 'login')->middleware(['XSS']);
 Route::post('/login', 'AuthController@login')->middleware(['XSS']);
 Route::get('/blog', 'BlogController@indexBlogs')->middleware(['XSS']);
 Route::get('/blog/{slug}', 'BlogController@show')->middleware(['XSS']);
+Route::post('/sendContact', 'ContactController@sendEmail')->middleware(['XSS']);
 
 Route::middleware(['isAdmin'])->prefix('admin')->group(function () {
     Route::get('/', function () {
