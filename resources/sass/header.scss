@@ -24,7 +24,7 @@ $blackcolor:rgb(97, 97, 97);
     top: 0;
     &.black{
         nav {
-            color: inherit !important;
+            color: inherit;
         }
     }
     &-container {
@@ -68,11 +68,9 @@ $blackcolor:rgb(97, 97, 97);
             width: 100%;
             &.active {
                 display: flex;
+                color: white !important;
                 .clos {
                     display: flex;
-                }
-                nav {
-                    color: white !important;
                 }
             }
             @media screen and (max-width: 875px) {
