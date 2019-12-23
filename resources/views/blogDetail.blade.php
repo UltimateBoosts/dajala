@@ -24,6 +24,10 @@
     <meta name="msapplication-TileImage" content="{{ asset('images/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
     <title>{{$blog->title}}</title>
+    <meta property="og:image" content="{{asset('storage/blog/images/'.$blog->id.'/large/'.$blog->image)}}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="355">
+    <meta property="og:image:height" content="217">
 </head>
 
 <body>

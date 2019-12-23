@@ -25,6 +25,10 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('images/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="355">
+    <meta property="og:image:height" content="217">
     <title>Inicio</title>
 </head>
 
