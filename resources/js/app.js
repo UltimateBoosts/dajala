@@ -171,3 +171,12 @@ if (document.querySelector('.slides')) {
 
 }
 
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelector('.header .open').addEventListener('click', () => {
+        document.querySelector('.header nav').classList.add('active');
+    })
+    document.querySelector('.header .clos').addEventListener('click', () => {
+        document.querySelector('.header nav').classList.remove('active');
+    })
+})

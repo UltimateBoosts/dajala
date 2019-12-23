@@ -1,13 +1,16 @@
 @import 'variables';
 $blackcolor:rgb(97, 97, 97);
+
 .header.black {
     color: $blackcolor;
     right: 0;
     background: rgba(39, 47, 45, 0) !important;
 }
+
 .header.black.relative {
     position: relative;
 }
+
 .header {
     position: absolute;
     z-index: 3;
@@ -19,6 +22,7 @@ $blackcolor:rgb(97, 97, 97);
     background: rgba(39, 47, 45, 0.3);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     top: 0;
+
     &-container {
         max-width: 1100px;
         width: 100%;
@@ -29,8 +33,26 @@ $blackcolor:rgb(97, 97, 97);
 
         .logo {
             max-width: 250px;
+
             img {
-                width: 100%
+                width: 100%;
+
+                @media screen and (max-width: 875px) {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        .open {
+            display: none;
+
+            @media screen and (max-width: 875px) {
+                display: flex;
+                position: absolute;
+                right: 0;
+                margin: 1em;
+                top: 0;
+                font-size: 1.5em;
             }
         }
 
@@ -40,8 +62,30 @@ $blackcolor:rgb(97, 97, 97);
             align-items: center;
             justify-content: center;
             width: 100%;
-
+            color: white;
+            &.active {
+                display: flex;
+                .clos {
+                    display: flex;
+                }
+            }
             @media screen and (max-width: 875px) {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                background: rgba(0, 0, 0, 0.76);
+                font-size: 1.5em;
+            }
+
+            .clos {
+                display: flex;
+                position: absolute;
+                right: 0;
+                margin: 1em;
+                top: 0;
                 display: none;
             }
 
@@ -54,6 +98,13 @@ $blackcolor:rgb(97, 97, 97);
                 justify-content: space-around;
                 width: 100%;
 
+                @media screen and (max-width: 875px) {
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 100%;
+                }
+
                 li {
                     display: inline-grid;
 
@@ -63,7 +114,8 @@ $blackcolor:rgb(97, 97, 97);
                         color: inherit;
                         letter-spacing: 1.2px;
                         border-bottom: 1px solid transparent;
-                        &.active{
+
+                        &.active {
                             border-bottom: 1px solid #009f34;
                         }
                     }

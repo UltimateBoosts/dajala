@@ -48,6 +48,7 @@
         </div>
     </section>
     <script src="https://kit.fontawesome.com/b40ab28631.js"></script>
+    <script src="{{asset('js/app.js')}}"></script>
     @include('footer') 
 </body>
 </html>
