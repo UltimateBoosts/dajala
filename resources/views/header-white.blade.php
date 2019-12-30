@@ -1,7 +1,9 @@
 <header class="header">
     <div class="header-container">
         <div class="logo">
-            <img src="{{asset('images/logo.png')}}" alt="logo">
+            <a href="{{url('home')}}">
+                <img src="{{asset('images/logo.png')}}" alt="logo">
+            </a>
         </div>
         <div class="open">
             <span class="fas fa-bars"></span>
