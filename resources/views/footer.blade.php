@@ -6,7 +6,7 @@
                     <li class="list-inline-item"><span class="fab fa-facebook-f"></span>DajalaCerrosyCordilleras</li>
                 </a>
                 <a target="_blanc" href="https://twitter.com/DajalaY">
-                    <li class="list-inline-item"><span class="fab fa-twitter"></span>@DajalaY</li>
+                    <li class="list-inline-item"><span class="fab fa-twitter"></span>@DajalaCYC</li>
                 </a>
                 <a href="mailto:info@dajalacerrosycordilleras.com">
                     <li class="list-inline-item"><span class="fas fa-envelope"> </span>info@dajalacerrosycordilleras.com</li>
